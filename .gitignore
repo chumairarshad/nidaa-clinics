@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment and logs
+.env
+.env.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Vercel
+.vercel
+
+# Temp and backup folders
+temp_orig/
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test & verification scripts
+*.log
+check-*.js
+verify-*.js
+validate-*.js
+test-*.js
+scratch/
+line_218.json

@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NiDAA Clinic Lahore | Dr. Bilal Warraich (Medical Director) - Psychiatric &amp; Rehabilitation Care</title>
+  <meta name="description" content="NiDAA Clinic Lahore (PHC Reg. #39483, Westwood 99 Thokar) led by Medical Director Dr. Bilal Warraich (MBBS MD DPM, 20+ Yrs Exp, UNODC American Qualified). Specialist in Addiction, Psychosis, MDD, OCD &amp; Hands-on CBT/ACT/ERP Training.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Red Healthcare Design System -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- MEDICAL HEARTBEAT PRELOADER -->
+  <div class="site-preloader" id="site-preloader">
+    <div class="heartbeat-preloader-wrap">
+      
+      <!-- Pulsing Heart & Animated ECG Line -->
+      <div class="hb-stage">
+        <div class="hb-heart-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <div class="hb-ecg-container">
+          <svg class="hb-ecg-svg" viewBox="0 0 260 50">
+            <path class="hb-ecg-bg" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+            <path class="hb-ecg-pulse" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Brand Logo -->
+      <div class="hb-brand-wrap">
+        <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="hb-brand-img">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOP SUB-HEADER / VIP 25% OFF ANNOUNCEMENT BAR -->
+  <div class="top-sub-header" id="top-sub-header">
+    <div class="container tsh-inner">
+      <div class="tsh-left">
+        <span class="tsh-badge">👑 VIP SERVICE</span>
+        <span class="tsh-text">
+          Exclusive Offer: Get <strong class="tsh-highlight">25% OFF</strong> on VIP Psychiatric &amp; Psychological Consultations with Dr. Bilal Warraich (Medical Director)!
+        </span>
+      </div>
+      <div class="tsh-right">
+        <span class="tsh-code">Use Code: <strong>VIP25</strong></span>
+        <button class="tsh-btn" onclick="claimVipDiscount()">Claim 25% OFF →</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Nidaa Clinic Lahore Home">
+        <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="header-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu (All Pages) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-item active">Home</a></li>
+          <li><a href="what-we-do.html" class="nav-item">What We Do</a></li>
+          <li><a href="our-team.html" class="nav-item">Our Team</a></li>
+          <li><a href="#blog" class="nav-item">Blog</a></li>
+          <li><a href="awards-certificates.html" class="nav-item">Awards &amp; Certificates</a></li>
+          <li><a href="podcast-video.html" class="nav-item">Podcast &amp; Video</a></li>
+          <li><a href="reviews.html" class="nav-item">Reviews</a></li>
+          <li><a href="contact-us.html" class="nav-item">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Emergency Line -->
+      <div class="header-action-col">
+        <a href="tel:+923217507866" class="header-phone-link">
+          <span style="color: var(--color-primary-red); font-size: 1.1rem;">📞</span>
+          <span class="d-none-sm">0321 7507866</span>
+        </a>
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-red-pill btn-sm">Book Appointment</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="mobile-item" style="color: var(--color-primary-red); font-weight: 700;">Home</a></li>
+        <li><a href="what-we-do.html" class="mobile-item">What We Do</a></li>
+        <li><a href="our-team.html" class="mobile-item">Our Team</a></li>
+        <li><a href="#blog" class="mobile-item">Blog</a></li>
+        <li><a href="awards-certificates.html" class="mobile-item">Awards &amp; Certificates</a></li>
+        <li><a href="podcast-video.html" class="mobile-item">Podcast &amp; Video</a></li>
+        <li><a href="reviews.html" class="mobile-item">Reviews</a></li>
+        <li><a href="contact-us.html" class="mobile-item">Contact Us</a></li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+        <a href="tel:+923217507866" class="btn btn-red-outline btn-block">Call 24/7 Helpline</a>
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-red-pill btn-block text-center" style="text-align: center; text-decoration: none;">Book Online Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (Exact Reference Bento Grid Layout) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container-wrap">
+        
+        <!-- 6-CARD BENTO GRID (Matches Reference Screenshot Exactly) -->
+        <div class="hero-bento-grid">
+          
+          <!-- ROW 1, CARD 1: Intro Lavender Card -->
+          <div class="bento-card bento-card-lavender" id="hero-card-1">
+            <div class="bento-tab-indicator"></div>
+            <div class="bento-card-body">
+              <div>
+                <h1 class="bento-h1-title">
+                  <span class="bht-black">Lahore's Largest</span>
+                  <span class="bht-black">Network of</span>
+                  <span class="bht-blue">Psychologists &amp;</span>
+                  <span class="bht-blue">Mental Health Clinics</span>
+                </h1>
+                <p class="bento-card-desc">
+                  Confidential, expert and result-driven psychological health &amp; addiction care for individuals, couples and families. Book online consultation with Lahore's top clinical specialists.
+                </p>
+              </div>
+              <div class="bento-card-footer">
+                <!-- Reference Treatment / Service Tags -->
+                <div class="hero-treatment-tags">
+                  <span class="ht-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <span>Anxiety &amp; Depression</span>
+                  </span>
+                  <span class="ht-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Psychotherapy &amp; CBT</span>
+                  </span>
+                </div>
+
+                <!-- Reference Dual Action Buttons -->
+                <div class="hero-dual-btns">
+                  <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn-hero-cta btn-hero-crimson">
+                    <span>Book Appointment</span>
+                    <span class="btn-arrow-icon">→</span>
+                  </a>
+                  <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20a%20Psychiatrist." target="_blank" rel="noopener noreferrer" class="btn-hero-cta btn-hero-purple">
+                    <span>Consult Psychiatrist</span>
+                    <span class="btn-arrow-icon">→</span>
+                  </a>
+                </div>
+
+                <!-- 24/7 Call & WhatsApp Pill -->
+                <div class="hero-call-whatsapp-wrap">
+                  <a href="tel:+923217507866" class="hero-call-whatsapp-pill" aria-label="Call or WhatsApp 24/7">
+                    <div class="hcw-icon-circle">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="hcw-text-group">
+                      <span class="hcw-caption">CALL / WHATSAPP 24/7</span>
+                      <span class="hcw-number">0321 7507866</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 1, CARD 2: Dr. Bilal Warraich - Medical Director & Chief Consultant -->
+          <div class="bento-card bento-card-doctor" id="hero-card-2">
+            <img src="assets/images/dr_bilal_hero.jpg" alt="Dr. Bilal Warraich - Medical Director &amp; Founder at NiDAA Clinic Lahore" class="bento-doc-img">
+            <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20Dr.%20Bilal%20Warraich." target="_blank" rel="noopener noreferrer" class="bento-consult-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Book A Consultation</span>
+            </a>
+          </div>
+
+          <!-- ROW 1, CARD 3: Sage Checklist Card -->
+          <div class="bento-card bento-card-sage" id="hero-card-3">
+            <h3 class="bento-sage-title">
+              Our Certified <span class="bst-blue">Psychologists</span> Provide:
+            </h3>
+            <ul class="bento-checklist">
+              <li class="bento-check-item">
+                <div class="bci-icon bci-icon-green">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="bci-text">Evidence-Based Psychological Assessments</span>
+              </li>
+              <li class="bento-check-item">
+                <div class="bci-icon bci-icon-blue">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="bci-text">Cognitive Behavioral Therapy (CBT)</span>
+              </li>
+              <li class="bento-check-item">
+                <div class="bci-icon bci-icon-purple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="bci-text">Personalized Treatment Plans</span>
+              </li>
+              <li class="bento-check-item">
+                <div class="bci-icon bci-icon-orange">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="bci-text">Inclusive Mental Health &amp; Rehab Care</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ROW 2, CARD 4: Rehabilitation & Healing Therapy Frame -->
+          <div class="bento-card bento-card-couple" id="hero-card-4">
+            <div class="bento-couple-inner">
+              <img src="assets/images/rehabilitation_therapy.jpg" alt="Mental health rehabilitation and therapy session at Nidaa Clinic Lahore" class="bento-couple-img">
+            </div>
+          </div>
+
+          <!-- ROW 2, CARD 5: Rehabilitation Counseling Session & 24/7 Call Badge -->
+          <div class="bento-card bento-card-consult" id="hero-card-5">
+            <div class="bento-table-wrap">
+              <img src="assets/images/rehabilitation_session.jpg" alt="Clinical rehabilitation and counseling session at Nidaa Clinic" class="bento-table-img">
+            </div>
+            <div class="bento-consult-details">
+              <p class="bento-consult-caption">
+                Professional therapy &amp; recovery support at Lahore's premier clinic.
+              </p>
+              <a href="tel:+923217507866" class="bento-call-pill">
+                <div class="bcp-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <span class="bcp-label">Call Us 24/7: </span>
+                  <span class="bcp-number">0321 7507866</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- ROW 2, CARD 6: 100% Confidential & Private (Rose Blush Card) -->
+          <div class="bento-card bento-card-rose" id="hero-card-6">
+            <div class="bento-rose-top-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <h3 class="bento-rose-h3">
+                100% <span class="text-rose-bold">Confidential</span> &amp;<br>Private
+              </h3>
+              <p class="bento-rose-desc">
+                We take your privacy seriously. All therapy sessions and medical records are fully encrypted and confidential.
+              </p>
+            </div>
+            <a href="what-we-do.html" class="bento-rose-link">
+              <span>View specialities</span>
+              <span class="link-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET OUR MULTIDISCIPLINARY DEPARTMENTS & STAFF (All 4 Boxes in 1 Single Line) -->
+    <section class="specialists-section" id="specialists">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">NIDAA CLINIC &amp; DRUG REHAB LAHORE</span>
+          <h2 class="main-section-h2">Meet Our Multidisciplinary Departments &amp; Staff</h2>
+          <p class="section-sub-p">Click on any department card below to view all team members, credentials, roles, and consultation details.</p>
+        </div>
+
+        <!-- 4 Department Hub Cards in 1 Row -->
+        <div class="dept-grid-4col">
+          
+          <!-- Box 1: Executive Leadership -->
+          <div class="dept-card-2col card-exec">
+            <div class="d2c-image-wrap">
+              <img src="assets/images/dept_exec_leadership.jpg" alt="Executive Leadership at NiDAA Clinic Lahore" class="d2c-img" loading="lazy">
+              <span class="d2c-overlay-badge">👑 Leadership</span>
+              <span class="d2c-feature-pill">🛡️ Governance</span>
+            </div>
+            <div class="d2c-body">
+              <h3 class="d2c-title">Executive Leadership</h3>
+              <p class="d2c-desc">
+                Clinical governance, ethical healthcare standards, and strict confidentiality protocols.
+              </p>
+            </div>
+            <div class="d2c-footer">
+              <a href="our-team.html#exec" class="btn-dept-cta">
+                <span>Consult Leadership</span>
+                <span class="cta-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Box 2: Medical Specialists -->
+          <div class="dept-card-2col card-med">
+            <div class="d2c-image-wrap">
+              <img src="assets/images/dept_medical_specialists.jpg" alt="Medical Specialists at NiDAA Clinic Lahore" class="d2c-img" loading="lazy">
+              <span class="d2c-overlay-badge" style="background: rgba(6, 78, 59, 0.88);">🩺 Medical</span>
+              <span class="d2c-feature-pill" style="color: #065F46;">💊 24/7 Detox</span>
+            </div>
+            <div class="d2c-body">
+              <h3 class="d2c-title">Medical Specialists</h3>
+              <p class="d2c-desc">
+                Physicians &amp; detox doctors overseeing safe physiological withdrawal &amp; vital stabilization.
+              </p>
+            </div>
+            <div class="d2c-footer">
+              <a href="our-team.html#med" class="btn-dept-cta" style="background: #059669;">
+                <span>Consult Specialists</span>
+                <span class="cta-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Box 3: Mental Health Specialists -->
+          <div class="dept-card-2col card-psych">
+            <div class="d2c-image-wrap">
+              <img src="assets/images/dept_mental_health.jpg" alt="Mental Health Specialists at NiDAA Clinic Lahore" class="d2c-img" loading="lazy">
+              <span class="d2c-overlay-badge" style="background: rgba(49, 46, 129, 0.88);">🧠 Psychology</span>
+              <span class="d2c-feature-pill" style="color: #3730A3;">✨ CBT &amp; Therapy</span>
+            </div>
+            <div class="d2c-body">
+              <h3 class="d2c-title">Mental Health Specialists</h3>
+              <p class="d2c-desc">
+                Licensed Clinical Psychologists delivering CBT, DBT, trauma resolution, and psychotherapy.
+              </p>
+            </div>
+            <div class="d2c-footer">
+              <a href="our-team.html#psych" class="btn-dept-cta" style="background: #4F46E5;">
+                <span>View Specialists</span>
+                <span class="cta-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Box 4: Consultant Psychiatrists -->
+          <div class="dept-card-2col card-psychiatrists">
+            <div class="d2c-image-wrap">
+              <img src="assets/images/dept_consultant_psychiatrists.jpg" alt="Consultant Psychiatrists at NiDAA Clinic Lahore" class="d2c-img" loading="lazy">
+              <span class="d2c-overlay-badge" style="background: rgba(91, 33, 182, 0.88);">⚡ Psychiatric</span>
+              <span class="d2c-feature-pill" style="color: #6D28D9;">🔬 Neuropsychiatry</span>
+            </div>
+            <div class="d2c-body">
+              <h3 class="d2c-title">Consultant Psychiatrists</h3>
+              <p class="d2c-desc">
+                FCPS &amp; PMDC certified psychiatrists providing neuropsychiatric evaluation &amp; medication.
+              </p>
+            </div>
+            <div class="d2c-footer">
+              <a href="our-team.html#psychiatrists" class="btn-dept-cta" style="background: #7C3AED;">
+                <span>Consult Psychiatrist</span>
+                <span class="cta-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Call to Action Banner linking to Organogram / Dedicated Team Page -->
+        <div class="team-cta-banner-box">
+          <div class="team-cta-text">
+            <h3>Explore NiDAA Clinic's Full Organizational Chart</h3>
+            <p>View our interactive organizational hierarchy tree, complete staff credentials, and direct consultation scheduling on our dedicated team page.</p>
+          </div>
+          <div>
+            <a href="our-team.html" class="btn btn-red-pill btn-lg" style="white-space: nowrap;">
+              <span>View Full Organogram Page</span>
+              <span style="margin-left: 0.35rem;">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACCREDITATION & RECOGNITION MARQUEE STRIP -->
+    <section class="brands-strip-section" id="accreditations">
+      <div class="container">
+        <span class="brands-label">ACCREDITED &amp; LICENSED HEALTHCARE INSTITUTIONS</span>
+        <div class="brands-grid">
+          <div class="brand-box">PHC Reg. #39483</div>
+          <div class="brand-box">Pakistan Psychiatric Association</div>
+          <div class="brand-box">UNODC 🇺🇸 Qualified Master Trainer</div>
+          <div class="brand-box">Westwood 99 Thokar Lahore</div>
+          <div class="brand-box">Established 2008</div>
+          <div class="brand-box">MBBS • MD • DPM Services</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET OUR OWNER & MEDICAL DIRECTOR (Dr. Bilal Warraich) -->
+    <section class="owner-section" id="owner">
+      <div class="container owner-2col-grid">
+        
+        <!-- Col 1: Photo & Stats -->
+        <div class="owner-col-photo">
+          <div class="owner-photo-box">
+            <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Warraich - Medical Director at NiDAA Clinic Lahore" class="owner-headshot">
+          </div>
+          <div class="owner-stats-strip">
+            <div class="os-box">
+              <strong>20+</strong>
+              <span>Years Exp (2004)</span>
+            </div>
+            <div class="os-box">
+              <strong>#39483</strong>
+              <span>PHC Reg. No.</span>
+            </div>
+            <div class="os-box">
+              <strong>UNODC 🇺🇸</strong>
+              <span>Master Trainer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Doctor Bio, Highlights & Direct WhatsApp/Call Actions -->
+        <div class="owner-col-bio">
+          <span class="section-badge-red">MEDICAL DIRECTOR &amp; CHIEF PSYCHIATRIST</span>
+          <h2 class="owner-name-title">Dr. Bilal Warraich</h2>
+          <p class="owner-degree-red">MBBS, MD, DPM (Psychiatry) • Member Pakistan Psychiatric Association</p>
+          <span class="owner-exp-tag">20+ Years Clinical Practice (Since 2004) • UNODC American 🇺🇸 Qualified</span>
+
+          <p class="owner-bio-p" style="margin-top: 0.85rem;">
+            Medical Director of NiDAA Clinic (PHC Reg. #39483) at Westwood 99 Thokar, Lahore. As a National Master Trainer on Substance Abuse and Addiction, Dr. Bilal leads international-standard psychiatric care, 24/7 medically supervised detox, and clinical capacity building across Pakistan.
+          </p>
+
+          <div class="owner-key-points-grid">
+            <div class="okp-item"><span class="red-bullet">✓</span> <strong>Inpatient Medical Detox:</strong> Safe withdrawal &amp; relapse prevention</div>
+            <div class="okp-item"><span class="red-bullet">✓</span> <strong>Neuropsychiatry:</strong> Psychosis, MDD &amp; severe OCD care</div>
+            <div class="okp-item"><span class="red-bullet">✓</span> <strong>Evidence-Based Therapy:</strong> Clinical CBT, ACT &amp; ERP protocols</div>
+            <div class="okp-item"><span class="red-bullet">✓</span> <strong>Capacity Building:</strong> Hands-on psychology internship training</div>
+          </div>
+
+          <!-- Direct Instant Action Buttons (Zero Form Required) -->
+          <div class="owner-action-btns-row">
+            <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20Dr.%20Bilal%20Warraich." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+              </svg>
+              <span>Book Dr. Bilal on WhatsApp</span>
+            </a>
+            <a href="tel:+923217507866" class="btn btn-red-pill">
+              <span>📞 Call Clinic: 0321 7507866</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FULL-WIDTH RED FEATURE BANNER -->
+    <section class="red-feature-banner-section">
+      <div class="container">
+        <div class="red-feature-banner">
+          
+          <div class="rfb-left">
+            <span class="rfb-pill-top">EVIDENCE-BASED CARE &amp; CAPACITY BUILDING</span>
+            <h2 class="rfb-title">NiDAA Clinic: Psychiatric Care, Rehab &amp; Hands-On Clinical Training</h2>
+            <p class="rfb-desc">
+              Under the direct supervision of Medical Director Dr. Bilal Warraich (UNODC American Qualified), NiDAA delivers specialized psychiatric treatment for Drug Abuse, Psychosis, MDD, and OCD, alongside hands-on training in CBT, ACT, and ERP for future psychologists.
+            </p>
+            <div class="rfb-pills-row">
+              <span class="rfb-tag">Substance Abuse Detox</span>
+              <span class="rfb-tag">Psychosis &amp; MDD</span>
+              <span class="rfb-tag">OCD &amp; ERP Protocol</span>
+              <span class="rfb-tag">CBT &amp; ACT Training</span>
+              <span class="rfb-tag">PHC Reg. #39483</span>
+            </div>
+          </div>
+
+          <div class="rfb-right-grid">
+            <div class="rfb-subcard">
+              <span class="rfb-sub-icon">🩺</span>
+              <strong>Personalized Treatment Plan</strong>
+              <p>Tailored interventions customized to individual history and psychological profile.</p>
+            </div>
+            <div class="rfb-subcard">
+              <span class="rfb-sub-icon">🏥</span>
+              <strong>Intensive Inpatient &amp; Outpatient</strong>
+              <p>Round-the-clock medical care with comfortable, private clinical recovery rooms.</p>
+            </div>
+            <div class="rfb-subcard">
+              <span class="rfb-sub-icon">📋</span>
+              <strong>Evidence-Based Therapies</strong>
+              <p>Scientifically validated CBT, DBT, and mindfulness-based relapse reduction.</p>
+            </div>
+            <div class="rfb-subcard">
+              <span class="rfb-sub-icon">📞</span>
+              <strong>24/7 On-Call Support</strong>
+              <p>Continuous care coordinator assistance and rapid crisis response in Lahore.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FACTS & INSIGHTS ("Mental Health Insights in Lahore") -->
+    <section class="insights-section" id="insights">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">FACTS &amp; INSIGHTS</span>
+          <h2 class="main-section-h2">Mental Health &amp; Recovery Insights in Lahore</h2>
+          <p class="section-sub-p">Real clinical statistics reflecting why timely diagnosis and professional rehabilitation save lives.</p>
+        </div>
+
+        <div class="insights-6cards-grid">
+          <div class="stat-insight-card">
+            <span class="sic-percent">89%</span>
+            <h4 class="sic-title">Low Awareness</h4>
+            <p class="sic-desc">Of individuals suffering from substance abuse delay treatment due to societal stigma before seeking help.</p>
+          </div>
+          <div class="stat-insight-card">
+            <span class="sic-percent">16.8%</span>
+            <h4 class="sic-title">Clinical Depression</h4>
+            <p class="sic-desc">Reported prevalence of mood and depressive disorders among young professionals and students in Lahore.</p>
+          </div>
+          <div class="stat-insight-card">
+            <span class="sic-percent">96.5%</span>
+            <h4 class="sic-title">Patient Satisfaction</h4>
+            <p class="sic-desc">Of our patients report marked psychological improvement and functional stability within 6 to 12 sessions.</p>
+          </div>
+          <div class="stat-insight-card">
+            <span class="sic-percent">94.8%</span>
+            <h4 class="sic-title">Sobriety Sustained</h4>
+            <p class="sic-desc">1-year clean rate maintained through our integrated inpatient rehabilitation and continuing aftercare system.</p>
+          </div>
+          <div class="stat-insight-card">
+            <span class="sic-percent">22.8%</span>
+            <h4 class="sic-title">Family Distress</h4>
+            <p class="sic-desc">Of families experience severe emotional burnout when managing a loved one's untreated addiction without therapy.</p>
+          </div>
+          <div class="stat-insight-card">
+            <span class="sic-percent">27.2%</span>
+            <h4 class="sic-title">Stress-Induced OCD</h4>
+            <p class="sic-desc">Cases with co-occurring severe anxiety successfully managed using specialized CBT Exposure &amp; Response Prevention.</p>
+          </div>
+        </div>
+
+        <!-- Why Choose Our Clinics -->
+        <div class="why-choose-subblock mt-5">
+          <h3 class="wc-heading text-center">Why Choose Nidaa Clinic Lahore?</h3>
+          <div class="wc-3cards-row">
+            <div class="wc-card">
+              <div class="wc-icon-red">🔒</div>
+              <h4 class="wc-card-title">100% Confidential &amp; Safe</h4>
+              <p class="wc-card-p">Protected consultations adhering strictly to ethical medical codes and privacy.</p>
+            </div>
+            <div class="wc-card">
+              <div class="wc-icon-red">👨‍⚕️</div>
+              <h4 class="wc-card-title">Verified Senior Doctors</h4>
+              <p class="wc-card-p">Consult qualified Clinical Psychologists &amp; Psychiatrists with minimum 10+ years experience.</p>
+            </div>
+            <div class="wc-card">
+              <div class="wc-icon-red">🌟</div>
+              <h4 class="wc-card-title">Patient-First Philosophy</h4>
+              <p class="wc-card-p">Empathetic, non-judgmental environment tailored to individual recovery and wellbeing.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SPECIALIZED CARE SOLUTIONS -->
+    <section class="services-section" id="services">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">SPECIALIZED CARE SOLUTIONS</span>
+          <h2 class="main-section-h2">Evidence-Based Treatment &amp; Rehabilitation</h2>
+          <p class="section-sub-p">Dedicated clinical programs designed for sustainable recovery and psychological wellness.</p>
+        </div>
+
+        <div class="services-2x2-grid">
+          
+          <div class="scs-card">
+            <div class="scs-badge-red">ADDICTION RECOVERY</div>
+            <h3 class="scs-title">Substance &amp; Drug Addiction Rehabilitation</h3>
+            <p class="scs-desc">
+              Medically managed detox and psychotherapy for Crystal Meth (Ice), Heroin, Opioids, Sedatives, and Alcohol with 24/7 medical supervision.
+            </p>
+            <ul class="scs-list">
+              <li>Safe Inpatient Medical Detoxification</li>
+              <li>Dual-Diagnosis Psychiatric Care</li>
+              <li>12-Step &amp; Cognitive Relapse Prevention</li>
+            </ul>
+            <div class="scs-action-row">
+              <span class="scs-fee-note">Starting from Rs. 3,500 / consultation</span>
+              <a href="what-we-do.html" class="btn btn-red-outline btn-sm">Explore Program →</a>
+            </div>
+          </div>
+
+          <div class="scs-card">
+            <div class="scs-badge-red">PSYCHOTHERAPY</div>
+            <h3 class="scs-title">Clinical Depression &amp; Anxiety Management</h3>
+            <p class="scs-desc">
+              Advanced Cognitive Behavioral Therapy (CBT) and psychiatric management for panic attacks, persistent depressive disorder, and social anxiety.
+            </p>
+            <ul class="scs-list">
+              <li>Comprehensive Mood Assessment</li>
+              <li>Negative Thought Pattern Restructuring</li>
+              <li>Mindfulness-Based Stress Reduction</li>
+            </ul>
+            <div class="scs-action-row">
+              <span class="scs-fee-note">Starting from Rs. 2,500 / consultation</span>
+              <button class="btn btn-red-outline btn-sm" onclick="openAppointmentModal()">Book Session →</button>
+            </div>
+          </div>
+
+          <div class="scs-card">
+            <div class="scs-badge-red">RELATIONSHIPS</div>
+            <h3 class="scs-title">Couples &amp; Family Rehabilitation Therapy</h3>
+            <p class="scs-desc">
+              Heal emotional divides, resolve codependency, and rebuild trust broken by addiction or chronic conflict in a safe, neutral space.
+            </p>
+            <ul class="scs-list">
+              <li>Marital Conflict &amp; Communication Healing</li>
+              <li>Codependency &amp; Enabling Deconstruction</li>
+              <li>Family System Psychoeducation</li>
+            </ul>
+            <div class="scs-action-row">
+              <span class="scs-fee-note">Starting from Rs. 3,000 / consultation</span>
+              <button class="btn btn-red-outline btn-sm" onclick="openAppointmentModal()">Book Session →</button>
+            </div>
+          </div>
+
+          <div class="scs-card">
+            <div class="scs-badge-red">SPECIALIZED PROTOCOL</div>
+            <h3 class="scs-title">OCD, PTSD &amp; Severe Trauma Recovery</h3>
+            <p class="scs-desc">
+              Structured exposure protocols, trauma-informed therapy, and neuro-psychological assessments to liberate patients from intrusive obsessions.
+            </p>
+            <ul class="scs-list">
+              <li>Exposure and Response Prevention (ERP)</li>
+              <li>Trauma-Focused Narrative Therapy</li>
+              <li>Sleep Hygiene &amp; Somatic Regulation</li>
+            </ul>
+            <div class="scs-action-row">
+              <span class="scs-fee-note">Starting from Rs. 2,800 / consultation</span>
+              <button class="btn btn-red-outline btn-sm" onclick="openAppointmentModal()">Book Session →</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Red Assessment Callout Strip -->
+        <div class="assessment-callout-strip mt-5">
+          <div class="assessment-red-bar">
+            <div class="arb-text">
+              <h4>Unsure which care program is right for you or your loved one?</h4>
+              <p>Take our 2-minute confidential assessment or consult our Lahore triage team.</p>
+            </div>
+            <div class="arb-btn-wrap">
+              <button class="btn btn-white-pill" onclick="openAppointmentModal()">Start Confidential Intake</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DESTINATION SECTION -->
+    <section class="health-destination-section" id="destination">
+      <div class="container destination-2col-grid">
+        
+        <div class="dest-col-text">
+          <span class="section-badge-red">ABOUT OUR CLINIC</span>
+          <h2 class="main-section-h2">Lahore's Trusted Mental Health &amp; Rehabilitation Destination</h2>
+          <p class="section-sub-p">
+            Established to deliver international-standard psychiatric care and compassionate rehabilitation in Punjab. We combine evidence-based medicine with absolute privacy.
+          </p>
+
+          <div class="dest-checklist">
+            <div class="dest-ci">
+              <div class="dci-icon-red">✓</div>
+              <div>
+                <strong>Advanced Clinical Infrastructure</strong>
+                <p>Private counseling rooms, inpatient medical detox suites, and calm recovery gardens.</p>
+              </div>
+            </div>
+            <div class="dest-ci">
+              <div class="dci-icon-red">✓</div>
+              <div>
+                <strong>Strict Doctor-Patient Confidentiality</strong>
+                <p>Zero data sharing. Fully encrypted medical files and discreet admissions.</p>
+              </div>
+            </div>
+            <div class="dest-ci">
+              <div class="dci-icon-red">✓</div>
+              <div>
+                <strong>Multidisciplinary Care Team</strong>
+                <p>Psychiatrists, clinical psychologists, and 24/7 nursing staff under one roof.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-red-pill btn-lg" onclick="openAppointmentModal()">Consult With Our Team</button>
+          </div>
+        </div>
+
+        <div class="dest-col-visual">
+          <div class="dest-photo-frame">
+            <img src="assets/images/clinic_room.jpg" alt="Nidaa Clinic Inpatient Facility in Lahore" class="dest-img">
+            <div class="dest-overlay-card">
+              <div class="doc-icon-circle">🏥</div>
+              <div>
+                <strong>Our Commitment</strong>
+                <span>Restoring health, hope, and dignity to every patient.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW CONSULTATION WORKS -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">HOW IT WORKS</span>
+          <h2 class="main-section-h2">How Your Recovery Journey Begins</h2>
+          <p class="section-sub-p">A seamless 4-step path from your initial inquiry to sustainable wellbeing.</p>
+        </div>
+
+        <div class="steps-4col-row">
+          
+          <div class="step-card-item">
+            <div class="step-num-pill">Step 1</div>
+            <div class="step-red-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 class="sci-title">Confidential Booking</h3>
+            <p class="sci-desc">Book online in 60 seconds or speak directly with our 24/7 intake coordinator.</p>
+          </div>
+
+          <div class="step-card-item">
+            <div class="step-num-pill">Step 2</div>
+            <div class="step-red-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="sci-title">Clinical Assessment</h3>
+            <p class="sci-desc">Comprehensive psychiatric evaluation with Dr. Bilal Warraich or a specialist psychologist.</p>
+          </div>
+
+          <div class="step-card-item">
+            <div class="step-num-pill">Step 3</div>
+            <div class="step-red-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3 class="sci-title">Personalized Care</h3>
+            <p class="sci-desc">Structured inpatient detox or outpatient CBT psychotherapy sessions.</p>
+          </div>
+
+          <div class="step-card-item">
+            <div class="step-num-pill">Step 4</div>
+            <div class="step-red-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="sci-title">Continuous Aftercare</h3>
+            <p class="sci-desc">12-month relapse prevention follow-ups and lifetime recovery community.</p>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <button class="btn btn-red-pill btn-lg" onclick="openAppointmentModal()">Book Your Consultation</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PATIENT SUCCESS STORIES -->
+    <section class="stories-section" id="stories">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">PATIENT SUCCESS STORIES</span>
+          <h2 class="main-section-h2">Verified Recovery Testimonials</h2>
+          <p class="section-sub-p">Real stories from individuals and families who overcame addiction and distress.</p>
+        </div>
+
+        <div class="testimonials-4col-grid">
+          
+          <div class="testi-card">
+            <div class="stars-gold">★★★★★</div>
+            <p class="testi-p">
+              "Dr. Bilal Warraich and his team helped me break free from a 4-year battle with Crystal Meth. Today I am 14 months sober and back with my family."
+            </p>
+            <div class="testi-user-row">
+              <div class="testi-avatar-mini">MA</div>
+              <div class="testi-user-meta">
+                <strong>Mohammad A.</strong>
+                <span>Gulberg, Lahore</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars-gold">★★★★★</div>
+            <p class="testi-p">
+              "The doctors are deeply empathetic and non-judgmental. The detox was smooth, and the CBT therapy changed how I handle anxiety."
+            </p>
+            <div class="testi-user-row">
+              <div class="testi-avatar-mini">HA</div>
+              <div class="testi-user-meta">
+                <strong>Hamza K.</strong>
+                <span>DHA Phase 5, Lahore</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars-gold">★★★★★</div>
+            <p class="testi-p">
+              "Complete privacy was our biggest concern. Nidaa Clinic handled my brother's rehabilitation with utmost dignity and clinical excellence."
+            </p>
+            <div class="testi-user-row">
+              <div class="testi-avatar-mini">ZN</div>
+              <div class="testi-user-meta">
+                <strong>Zainab N.</strong>
+                <span>Johar Town, Lahore</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars-gold">★★★★★</div>
+            <p class="testi-p">
+              "Professional, private and medically advanced. Reclaiming my life from prescription drugs was the best decision I ever made."
+            </p>
+            <div class="testi-user-row">
+              <div class="testi-avatar-mini">SR</div>
+              <div class="testi-user-meta">
+                <strong>Saad R.</strong>
+                <span>Model Town, Lahore</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="reviews.html" class="btn btn-red-outline btn-lg">Read More Verified Reviews</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAJOR LOCALITIES ("We Are Where You Are") -->
+    <section class="cities-section" id="cities">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">WE ARE WHERE YOU ARE</span>
+          <h2 class="main-section-h2">Major Localities &amp; Areas Where We Serve</h2>
+        </div>
+
+        <div class="cities-pills-wrap">
+          <button class="city-pill">Gulberg III</button>
+          <button class="city-pill">DHA Phase 1-6</button>
+          <button class="city-pill">Johar Town</button>
+          <button class="city-pill">Model Town</button>
+          <button class="city-pill">Bahria Town</button>
+          <button class="city-pill">Faisal Town</button>
+          <button class="city-pill">Cantt Lahore</button>
+          <button class="city-pill">Garden Town</button>
+          <button class="city-pill">Shadman</button>
+          <button class="city-pill">Wapda Town</button>
+          <button class="city-pill">Township</button>
+          <button class="city-pill">Valencia</button>
+          <button class="city-pill">Askari 10 &amp; 11</button>
+          <button class="city-pill">Allama Iqbal Town</button>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="contact-us.html" class="btn btn-red-outline btn-sm">View Clinic Directions</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BIG RED STATS BAR -->
+    <section class="stats-red-banner-section">
+      <div class="container">
+        <div class="stats-red-bar">
+          
+          <div class="srb-left">
+            <h3 class="srb-title">Largest Network of Psychological Care &amp; Rehab in Lahore</h3>
+            <p class="srb-sub">Trusted by thousands of patients and families across Pakistan.</p>
+          </div>
+
+          <div class="srb-right-stats">
+            <div class="srb-stat-item">
+              <strong>50+</strong>
+              <span>Clinical Partners</span>
+            </div>
+            <div class="srb-stat-item">
+              <strong>24/7</strong>
+              <span>Intake Support</span>
+            </div>
+            <div class="srb-stat-item">
+              <strong>100%</strong>
+              <span>Confidential</span>
+            </div>
+            <div class="srb-stat-item">
+              <strong>18+</strong>
+              <span>Years of Trust</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="faqs-section" id="faqs">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="main-section-h2">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-2col-grid" id="faq-accordion-container">
+          
+          <!-- Column 1 -->
+          <div class="faq-col">
+            
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>Is the consultation completely confidential?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Yes, 100%. All consultations and inpatient records at Nidaa Clinic are strictly protected under Pakistan Psychological Association ethics and doctor-patient confidentiality.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>How do I book an appointment with Dr. Bilal Warraich?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>You can book directly via WhatsApp at 0321 7507866 or call our 24/7 clinic helpline for instant scheduling with Dr. Bilal Warraich.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>What drugs addiction treatments do you offer?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>We provide medically supervised detox and rehabilitation for Crystal Meth (Ice), Heroin, Opioids, Benzodiazepines, Alcohol, and prescription drug dependency.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>What is the consultation fee?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Consultation fees range from Rs. 2,200 to Rs. 3,500 per session depending on the clinician's seniority and specialized qualifications.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2 -->
+          <div class="faq-col">
+            
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>How long does the inpatient rehabilitation program take?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Programs typically range from 30 to 90 days depending on the patient's substance history, dual-diagnosis evaluation, and recovery milestones.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>Can I get online therapy or video consultation?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Yes! We offer fully encrypted, HIPAA-compliant HD video consultations across Pakistan and for overseas Pakistanis abroad.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>Do you involve families in the recovery process?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Yes, family psychoeducation and codependency therapy are central pillars of our rehabilitation methodology to ensure a supportive home environment.</p>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="fai-btn">
+                <span>Do you provide continuing aftercare after discharge?</span>
+                <span class="fai-chevron">⌄</span>
+              </button>
+              <div class="fai-body">
+                <p>Yes, continuous care and progress monitoring are central to our practice. We offer a 12-month aftercare system with regular check-ins and support group meetings.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLINICAL & MENTAL HEALTH BLOG SECTION -->
+    <section class="blog-section" id="blog">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-badge-red">EVIDENCE-BASED PSYCHIATRY &amp; RECOVERY BLOG</span>
+          <h2 class="main-section-h2">Clinical Insights &amp; Mental Health Articles</h2>
+          <p class="section-sub-p">Authoritative guides, addiction recovery resources, and psychotherapy insights from Dr. Bilal Warraich and the NiDAA Clinic multidisciplinary team.</p>
+        </div>
+
+        <div class="blog-grid-4">
+          
+          <!-- Blog Card 1: Addiction Recovery -->
+          <article class="blog-card">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/service_rehab.jpg" alt="Ice Addiction Detox in Lahore" class="blog-thumb-img" loading="lazy">
+              <span class="blog-category-badge">💊 Addiction Detox</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span>By Dr. Bilal Warraich</span>
+                <span>⏱️ 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">Understanding Ice (Crystal Meth) Addiction &amp; Safe Medical Detox</h3>
+              <p class="blog-card-excerpt">
+                A clinical roadmap for withdrawal stabilization, vital monitoring, neurochemical rebalancing, and inpatient medical detox protocols under PHC standards.
+              </p>
+              <div class="blog-card-footer">
+                <span class="blog-author-info">Medical Director</span>
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20read%20the%20article%20on%20Ice%20Detox%20and%20want%20to%20inquire%20about%20treatment." target="_blank" rel="noopener noreferrer" class="blog-read-link">
+                  <span>Consult Specialist</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Blog Card 2: CBT & Anxiety -->
+          <article class="blog-card">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/service_counseling.jpg" alt="CBT for Panic and OCD" class="blog-thumb-img" loading="lazy">
+              <span class="blog-category-badge" style="background: rgba(79, 70, 229, 0.88);">🧠 Clinical Psychology</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span>By Miss Mavra Gohar</span>
+                <span>⏱️ 4 min read</span>
+              </div>
+              <h3 class="blog-card-title">CBT &amp; Exposure Therapy: Overcoming Severe Panic Attacks &amp; OCD</h3>
+              <p class="blog-card-excerpt">
+                How evidence-based Cognitive Behavioral Therapy (CBT) and ERP desensitize compulsive loops, intrusive thoughts, and generalized anxiety disorders.
+              </p>
+              <div class="blog-card-footer">
+                <span class="blog-author-info">Psychology Team</span>
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20a%20Psychologist%20for%20CBT%20and%20Anxiety." target="_blank" rel="noopener noreferrer" class="blog-read-link">
+                  <span>Consult Psychologist</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Blog Card 3: Neuropsychiatry -->
+          <article class="blog-card">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/service_psychiatric.jpg" alt="Psychosis and MDD Evaluation" class="blog-thumb-img" loading="lazy">
+              <span class="blog-category-badge" style="background: rgba(124, 58, 237, 0.88);">⚡ Neuropsychiatry</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span>By Dr. Adnan Yousaf</span>
+                <span>⏱️ 6 min read</span>
+              </div>
+              <h3 class="blog-card-title">Early Warning Signs of Psychosis &amp; Major Depressive Disorder (MDD)</h3>
+              <p class="blog-card-excerpt">
+                Recognizing subtle cognitive changes, social withdrawal, sleep breakdown, and depressive indicators for timely psychiatric medication and clinical care.
+              </p>
+              <div class="blog-card-footer">
+                <span class="blog-author-info">Consultant Psychiatrist</span>
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20a%20Psychiatric%20Evaluation." target="_blank" rel="noopener noreferrer" class="blog-read-link">
+                  <span>Consult Psychiatrist</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Blog Card 4: Family Healing -->
+          <article class="blog-card">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/rehabilitation_session.jpg" alt="Family Systems in Recovery" class="blog-thumb-img" loading="lazy">
+              <span class="blog-category-badge" style="background: rgba(13, 148, 136, 0.88);">🌿 Family Systems</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta-row">
+                <span>By Miss Fareeha Asif</span>
+                <span>⏱️ 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">Breaking Codependency: How Families Heal During Addiction Recovery</h3>
+              <p class="blog-card-excerpt">
+                Transforming unhealthy enabling dynamics into constructive boundaries, emotional empowerment, and supportive family communication systems.
+              </p>
+              <div class="blog-card-footer">
+                <span class="blog-author-info">Executive Directorate</span>
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20inquire%20about%20Family%20Counseling." target="_blank" rel="noopener noreferrer" class="blog-read-link">
+                  <span>Family Counseling</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRE-FOOTER TRUST STRIP -->
+    <section class="pre-footer-trust-strip">
+      <div class="container pfts-grid">
+        <div class="pfts-item">
+          <div class="pfts-icon">🩺</div>
+          <div class="pfts-text">
+            <strong>Certified Specialists</strong>
+            <p>Experienced &amp; verified clinical specialists.</p>
+          </div>
+        </div>
+        <div class="pfts-item">
+          <div class="pfts-icon">🔒</div>
+          <div class="pfts-text">
+            <strong>Privacy First</strong>
+            <p>100% confidential consultations.</p>
+          </div>
+        </div>
+        <div class="pfts-item">
+          <div class="pfts-icon">📈</div>
+          <div class="pfts-text">
+            <strong>Proven Results</strong>
+            <p>Personalized guidance to lasting wellness.</p>
+          </div>
+        </div>
+        <div class="pfts-item">
+          <div class="pfts-icon">⚡</div>
+          <div class="pfts-text">
+            <strong>Easy Appointments</strong>
+            <p>Book online in just 60 seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RED FOOTER -->
+  <footer class="red-site-footer">
+    <div class="container">
+      <div class="rf-grid">
+        
+        <!-- Col 1: Logo & Bio -->
+        <div class="rf-col rf-col-brand">
+          <a href="index.html" class="rf-logo-box" aria-label="Nidaa Clinic Lahore Home">
+            <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="footer-logo-img">
+          </a>
+          <p class="rf-bio-text">
+            Lahore's premier psychiatric and addiction rehabilitation centre (PHC Reg. #39483) at 99 Westwood Thokar, led by Medical Director Dr. Bilal Warraich (UNODC American Qualified). Confidential, evidence-based clinical care.
+          </p>
+          <div class="rf-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Pages) -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Quick Links</h4>
+          <ul class="rf-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="awards-certificates.html">Awards &amp; Certificates</a></li>
+            <li><a href="podcast-video.html">Podcast &amp; Video</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Programs -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Programs</h4>
+          <ul class="rf-links">
+            <li><a href="what-we-do.html">Substance Detox</a></li>
+            <li><a href="what-we-do.html">Inpatient Rehabilitation</a></li>
+            <li><a href="what-we-do.html">CBT Psychotherapy</a></li>
+            <li><a href="what-we-do.html">Dual Diagnosis Care</a></li>
+            <li><a href="what-we-do.html">Relapse Prevention</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Contact Us</h4>
+          <div class="rf-contact-lines">
+            <p>📞 0321 7507866</p>
+            <p>✉️ info@nidaaclinic.pk</p>
+            <p>📍 99 Westwood Colony, Thokar Niaz Baig, Lahore (PHC Reg. #39483)</p>
+          </div>
+        </div>
+
+        <!-- Col 5: Book Consultation Card -->
+        <div class="rf-col rf-col-book">
+          <h4 class="rf-col-title">Direct Consultation</h4>
+          <div class="rf-mini-doc-card">
+            <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Warraich" class="rf-mini-doc-img">
+            <div class="rf-mini-doc-info">
+              <span>Consult Dr. Bilal Warraich (Medical Director)</span>
+              <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20would%20like%20to%20consult%20Dr.%20Bilal%20Warraich." class="btn btn-red-pill btn-sm" target="_blank" rel="noopener noreferrer">Book via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="rf-bottom-bar text-center">
+        <p>© 2026 NiDAA Clinic (National Institute on Drug Abuse and Addiction) Lahore • PHC Reg. #39483. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING STICKY SCROLL ACTION BAR (Book Appointment & WhatsApp) -->
+  <div class="floating-scroll-bar" id="floating-scroll-bar">
+    <button class="fsb-btn fsb-btn-book" onclick="openAppointmentModal()" aria-label="Book Appointment">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Book Appointment</span>
+    </button>
+    <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20inquire%20about%20booking%20a%20consultation%20with%20Dr.%20Bilal%20Warraich." class="fsb-btn fsb-btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+
+    <!-- 10-SECOND AUTO CALL POPUP MODAL (Landscape on Laptop, Square on Mobile) -->
+  <div class="modal-backdrop" id="call-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeCallModal()">
+    <div class="modal-card call-modal-card">
+      <button class="modal-close" onclick="closeCallModal()" aria-label="Close Popup">&times;</button>
+      
+      <div class="cm-landscape-wrap">
+        
+        <!-- LEFT COLUMN (Doctor Profile & Status) -->
+        <div class="cm-left-col">
+          <div class="cm-badge-row">
+            <span class="cm-pulse-dot"></span>
+            <span class="cm-badge-text">24/7 Helpline • Live</span>
+          </div>
+
+          <div class="cm-doc-card-vert">
+            <div class="cm-avatar-box">
+              <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Warraich - Medical Director" class="cm-doc-img">
+              <span class="cm-online-badge" title="Doctor Online"></span>
+            </div>
+            <div class="cm-doc-details">
+              <h4 class="cm-doc-name">Dr. Bilal Warraich</h4>
+              <p class="cm-doc-spec">MBBS MD DPM • 20+ Yrs Exp (2004)</p>
+              <p class="cm-doc-loc">Medical Director • NiDAA Clinic (PHC #39483)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN (Headline, Phone & Actions) -->
+        <div class="cm-right-col">
+          <div class="cm-content-box">
+            <h3 class="cm-heading">Need Immediate Psychiatric or Addiction Support?</h3>
+            <p class="cm-description">
+              Speak directly with our senior clinical coordinator or connect with Dr. Bilal Warraich's team. 100% confidential.
+            </p>
+          </div>
+
+          <!-- Highlighted Phone Number Display -->
+          <div class="cm-phone-display">
+            <div class="cm-phone-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="cm-phone-text">
+              <span class="cm-phone-label">DIRECT 24/7 HELPLINE / WHATSAPP</span>
+              <span class="cm-phone-num">0321 7507866</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="cm-actions-group">
+            <div class="cm-actions-row">
+              <a href="tel:+923217507866" class="btn-call-now" onclick="closeCallModal()">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Helpline</span>
+              </a>
+
+              <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20Dr.%20Bilal%20Warraich." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal" onclick="closeCallModal()">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            <button type="button" class="btn btn-red-outline btn-block" onclick="switchFromCallToAppModal()">
+              <span>Book Online Appointment</span>
+            </button>
+          </div>
+
+          <div class="cm-footer-note text-center">
+            <button type="button" class="cm-dismiss-link" onclick="closeCallModal()">Maybe later</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+      <!-- VIP 25% OFF CONGRATULATIONS CELEBRATION MODAL -->
+  <div class="modal-backdrop" id="vip-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeVipModal()">
+    <div class="modal-card vip-modal-card">
+      <button class="modal-close" onclick="closeVipModal()" aria-label="Close Popup">&times;</button>
+      
+      <!-- Celebratory Header -->
+      <div class="vm-celebrate-header">
+        <div class="vm-confetti-icons">🎉 👑 🎊 ✨</div>
+        <h3 class="vm-title">Congratulations! <span class="vm-title-grad">25% OFF</span></h3>
+        <p class="vm-subtitle">You have unlocked an exclusive <strong>25% VIP Discount Voucher</strong> for consultations with Dr. Bilal Warraich (Medical Director) &amp; Specialists.</p>
+      </div>
+
+      <!-- VIP Voucher Ticket Card -->
+      <div class="vm-voucher-ticket">
+        <div class="vm-vt-left">
+          <span class="vm-vt-tag">✨ VIP EXCLUSIVE REWARD</span>
+          <div class="vm-vt-code">CODE: <span>VIP25</span></div>
+          <span class="vm-vt-note">Valid for In-Clinic (Westwood 99 Thokar) &amp; Online Video</span>
+        </div>
+        <div class="vm-vt-divider"></div>
+        <div class="vm-vt-right">
+          <span class="vm-old-price">Rs. 3,500</span>
+          <span class="vm-new-price">Rs. 2,625</span>
+          <span class="vm-save-pill">SAVE 25%</span>
+        </div>
+      </div>
+
+      <!-- Instant WhatsApp Claim Option -->
+      <div class="vm-whatsapp-claim" style="margin-top: 1.5rem;">
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20claim%20my%2025%25%20VIP%20Discount%20(Code:%20VIP25)%20for%20a%20consultation%20with%20Dr.%20Bilal%20Warraich." target="_blank" rel="noopener noreferrer" class="vm-wa-btn" style="padding: 1rem 1.5rem; font-size: 1rem; justify-content: center;" onclick="closeVipModal()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+          </svg>
+          <span>Claim 25% OFF via WhatsApp (0321 7507866)</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <!-- Toast Notification Stack -->
+  <div class="toast-stack" id="toast-stack"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

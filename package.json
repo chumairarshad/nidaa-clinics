@@ -1,0 +1,22 @@
+{
+  "name": "lahore-psychologists",
+  "version": "1.0.0",
+  "description": "NiDAA Clinic (National Institute on Drug Abuse and Addiction) - Dr. Bilal Warraich (Medical Director)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Static site ready for deployment'"
+  },
+  "keywords": [
+    "psychiatrist",
+    "psychologist",
+    "lahore",
+    "nidaa clinic",
+    "addiction",
+    "dr bilal warraich"
+  ],
+  "author": "Dr. Bilal Warraich",
+  "license": "ISC"
+}
