@@ -6767,6 +6767,17 @@ img {
   transform: translateY(-2px);
 }
 
+.btn-staff-500-disabled {
+  background: #F8FAFC !important;
+  color: #94A3B8 !important;
+  border: 1.5px dashed #CBD5E1 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* Badge Modifiers */
 .staff-500-dept-badge.badge-exec { background: rgba(185, 28, 28, 0.92); }
 .staff-500-dept-badge.badge-med { background: rgba(6, 95, 70, 0.92); }

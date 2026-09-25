@@ -529,21 +529,32 @@ function searchStaff(query) {
 }
 
 function filterStaff500(dept, btn) {
+  const cards = document.querySelectorAll('.staff-card-500');
+  let matched = 0;
+  cards.forEach(card => {
+    const cardDepts = (card.getAttribute('data-dept') || '').split(' ');
+    if (dept === 'all' || cardDepts.includes(dept)) {
+      matched++;
+    }
+  });
+
+  // If requested filter has no matching cards, fallback to 'all'
+  const activeDept = matched > 0 ? dept : 'all';
+
   // Update filter pill buttons
   const filterBtns = document.querySelectorAll('.s500-pill-btn');
   filterBtns.forEach(b => {
-    if (btn) {
+    if (btn && activeDept === dept) {
       b.classList.toggle('active', b === btn);
     } else {
-      b.classList.toggle('active', b.getAttribute('data-filter') === dept);
+      b.classList.toggle('active', b.getAttribute('data-filter') === activeDept);
     }
   });
 
   // Filter 500x500 staff cards
-  const cards = document.querySelectorAll('.staff-card-500');
   cards.forEach(card => {
     const cardDepts = (card.getAttribute('data-dept') || '').split(' ');
-    if (dept === 'all' || cardDepts.includes(dept)) {
+    if (activeDept === 'all' || cardDepts.includes(activeDept)) {
       card.style.display = 'flex';
     } else {
       card.style.display = 'none';
