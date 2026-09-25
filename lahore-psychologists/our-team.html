@@ -10,20 +10,55 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- Top Announcement Promo Bar -->
-  <div class="top-announcement-bar" id="top-promo-bar">
-    <div class="container">
-      <div class="tab-content-flex">
-        <span class="tsh-badge">LIMITED TIME OFFER</span>
-        <span class="tsh-text">🎉 Get <strong>25% OFF</strong> on First Psychiatric &amp; Psychological Consultation</span>
+  <!-- MEDICAL HEARTBEAT PRELOADER -->
+  <div class="site-preloader" id="site-preloader">
+    <div class="heartbeat-preloader-wrap">
+      
+      <!-- Pulsing Heart & Animated ECG Line -->
+      <div class="hb-stage">
+        <div class="hb-heart-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <div class="hb-ecg-container">
+          <svg class="hb-ecg-svg" viewBox="0 0 260 50">
+            <path class="hb-ecg-bg" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+            <path class="hb-ecg-pulse" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Brand Logo -->
+      <div class="hb-brand-wrap">
+        <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="hb-brand-img">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOP SUB-HEADER / VIP 25% OFF ANNOUNCEMENT BAR -->
+  <div class="top-sub-header" id="top-sub-header">
+    <div class="container tsh-inner">
+      <div class="tsh-left">
+        <span class="tsh-badge">👑 VIP SERVICE</span>
+        <span class="tsh-text">
+          Exclusive Offer: Get <strong class="tsh-highlight">25% OFF</strong> on VIP Psychiatric &amp; Psychological Consultations with Dr. Bilal Warraich (Medical Director)!
+        </span>
+      </div>
+      <div class="tsh-right">
         <span class="tsh-code">Use Code: <strong>VIP25</strong></span>
         <button class="tsh-btn" onclick="claimVipDiscount()">Claim 25% OFF →</button>
       </div>
