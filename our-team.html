@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Medical Team &amp; Staff Hierarchy | Nidaa Clinic &amp; Drug Rehab Lahore</title>
-  <meta name="description" content="Meet the multidisciplinary clinical and operations team of Nidaa Clinic and Drug Rehab Lahore led by CEO Executive Dr. Bilal Asghar Warraich &amp; MD Miss Fareeha Asif.">
-  <meta name="keywords" content="Nidaa Clinic Lahore Doctors, Dr. Bilal Asghar Warraich, Clinical Psychologists Lahore, Consultant Psychiatrists Lahore, Rehab Staff Lahore">
+  <title>Our Medical Team — Coming Soon | Nidaa Clinic &amp; Drug Rehab Lahore</title>
+  <meta name="description" content="Our multidisciplinary medical specialists and clinical psychology team directory is currently updating. Consultation and 24/7 helpline available at Nidaa Clinic Lahore.">
+  <meta name="keywords" content="Nidaa Clinic Lahore Doctors, Dr. Bilal Asghar Warraich, Miss Ayesha Ishaq, Clinical Psychologists Lahore, Consultant Psychiatrists Lahore, Rehab Staff Lahore">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,206 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* COMING SOON SHOWCASE STYLES */
+    .team-coming-soon-section {
+      padding: 4.5rem 0 5rem;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .cs-hero-box {
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: #FEF2F2;
+      color: #C4161C;
+      border: 1px solid #FECACA;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .cs-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #C4161C;
+      display: inline-block;
+      animation: csPulse 1.8s infinite;
+    }
+    @keyframes csPulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 22, 28, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(196, 22, 28, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 22, 28, 0); }
+    }
+    .cs-main-heading {
+      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+      font-weight: 900;
+      color: #0F172A;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .cs-highlight-red {
+      color: #C4161C;
+    }
+    .cs-lead-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.7;
+      max-width: 780px;
+      margin: 0 auto 3rem;
+    }
+    .cs-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+      margin-bottom: 3.5rem;
+    }
+    .cs-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 2rem 1.65rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .cs-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+      border-color: #CBD5E1;
+    }
+    .cs-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .cs-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 0.6rem;
+    }
+    .cs-card-p {
+      font-size: 0.88rem;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .cs-card-tag {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cs-emergency-box {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      border-radius: 24px;
+      padding: 2.75rem 2.5rem;
+      color: #FFFFFF;
+      text-align: left;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    }
+    .cs-eb-icon {
+      font-size: 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cs-eb-content h4 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.6rem;
+    }
+    .cs-eb-content p {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 760px;
+    }
+    .cs-actions-row {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-wa-green {
+      display: inline-flex;
+      align-items: center;
+      background: #25D366;
+      color: #FFFFFF !important;
+      padding: 0.75rem 1.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    }
+    .btn-wa-green:hover {
+      background: #1DA851;
+      transform: translateY(-2px);
+    }
+    .btn-white-outline {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF !important;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-white-outline:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .cs-emergency-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .cs-actions-row {
+        justify-content: center;
+      }
+      .cs-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -132,96 +332,101 @@
           <span class="breadcrumb-curr">Our Team</span>
         </nav>
         <span class="section-badge-red">NIDAA CLINIC AND DRUG REHAB LAHORE</span>
-        <h1 class="subpage-h1">Our Multidisciplinary Medical, Psychological &amp; Operations Team</h1>
+        <h1 class="subpage-h1">Medical &amp; Clinical Team Directory — Coming Soon</h1>
         <p class="subpage-intro">
-          Led by CEO Executive Dr. Bilal Asghar Warraich (UNODC Qualified Addiction Psychiatrist) and Managing Director Miss Fareeha Asif. Our licensed team delivers board-certified psychiatric care, clinical psychotherapy, and 24/7 inpatient recovery supervision in Lahore.
+          We are currently upgrading and expanding our verified medical specialists and clinical psychology team directory under Punjab Healthcare Commission (PHC Reg. #39483) standards.
         </p>
 
       </div>
     </section>
 
-
-    <!-- 500 x 500 STAFF PROFILES SHOWCASE SECTION -->
-    <section class="staff-showcase-500-section" id="staff-showcase">
+    <!-- COMING SOON SHOWCASE SECTION -->
+    <section class="team-coming-soon-section" id="staff-showcase">
       <div class="container">
         
-        <div class="section-title-wrap text-center" style="margin-bottom: 2rem;">
-          <span class="section-badge-red">NIDAA CLINIC LAHORE DIRECTORY</span>
-          <h2 class="main-section-h2">Multidisciplinary Medical &amp; Clinical Leadership</h2>
-          <p class="section-sub-p">Explore complete qualifications, clinical specializations, and direct consultation scheduling for our executive clinical leadership.</p>
-        </div>
-
-        <!-- Filter Pill Buttons -->
-        <div class="staff-500-filter-bar">
-          <button class="s500-pill-btn active" data-filter="all" onclick="filterStaff500('all', this)">
-            <span>All Leadership</span>
-            <span class="filter-count" style="font-size: 0.76rem; background: rgba(0,0,0,0.1); padding: 0.15rem 0.5rem; border-radius: 999px;">2</span>
-          </button>
-          <button class="s500-pill-btn" data-filter="exec" onclick="filterStaff500('exec', this)">
-            <span>👑 Executive Leadership</span>
-            <span class="filter-count" style="font-size: 0.76rem; background: rgba(0,0,0,0.06); padding: 0.15rem 0.5rem; border-radius: 999px;">2</span>
-          </button>
-          <button class="s500-pill-btn" data-filter="psychiatrists" onclick="filterStaff500('psychiatrists', this)">
-            <span>⚡ Consultant Psychiatrist</span>
-            <span class="filter-count" style="font-size: 0.76rem; background: rgba(0,0,0,0.06); padding: 0.15rem 0.5rem; border-radius: 999px;">1</span>
-          </button>
-        </div>
-
-        <!-- 500x500 Staff Grid (2 Members) -->
-        <div class="staff-500-grid" id="staff-500-cards-container">
-          
-          <!-- 1. Dr. Bilal Asghar Warraich -->
-          <div class="staff-card-500" data-dept="exec psychiatrists">
-            <div class="staff-500-picture-wrap">
-              <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Asghar Warraich - CEO Executive" width="500" height="500" loading="eager">
-              <span class="staff-500-dept-badge badge-exec">👑 Executive Board</span>
-              <span class="staff-500-status-pill"><span class="staff-500-status-dot"></span> Available Today</span>
-            </div>
-            <div class="staff-500-details">
-              <div class="staff-500-name-row">
-                <h3 class="staff-500-name">Dr. Bilal Asghar Warraich</h3>
-                <span class="staff-500-verified" title="Verified Practitioner">✓</span>
-              </div>
-              <span class="staff-500-role">CEO Executive • Chief Psychiatrist &amp; Medical Director</span>
-              <div class="staff-500-creds">
-                MBBS, MD, DPM (Psychiatric Services) • Member Pakistan Psychiatric Association • UNODC 🇺🇸 Qualified Addiction Specialist
-              </div>
-              <div class="staff-500-footer">
-                <div class="staff-500-fee">
-                  <span>Consultation Fee:</span>
-                  <strong>Rs. 3,500</strong>
-                </div>
-                <button type="button" class="btn-staff-500-book" onclick="openDirectBookingForDoc('Dr. Bilal Asghar Warraich (CEO Executive)', 'NiDAA Clinic Westwood 99 Thokar', 'Rs. 3,500')">
-                  <span>Book Direct Consultation</span>
-                  <span>→</span>
-                </button>
-              </div>
-            </div>
+        <div class="cs-hero-box">
+          <div class="cs-badge-pill">
+            <span class="cs-pulse-dot"></span>
+            <span>DIRECTORY UNDER ACTIVE REFINEMENT</span>
           </div>
 
-          <!-- 2. Miss Fareeha Asif -->
-          <div class="staff-card-500" data-dept="exec">
-            <div class="staff-500-picture-wrap">
-              <img src="assets/images/staff_fareeha_asif.jpg" alt="Miss Fareeha Asif - Managing Director" width="500" height="500" loading="eager">
-              <span class="staff-500-dept-badge badge-exec">🌟 Executive Board</span>
-              <span class="staff-500-status-pill"><span class="staff-500-status-dot"></span> On Duty</span>
+          <h2 class="cs-main-heading">
+            Comprehensive Medical Directory &amp; Doctor Profiles <span class="cs-highlight-red">Launching Soon</span>
+          </h2>
+
+          <p class="cs-lead-desc">
+            Led by CEO Executive <strong>Dr. Bilal Asghar Warraich</strong> (UNODC Qualified Addiction Psychiatrist) and Managing Director <strong>Miss Fareeha Asif</strong>. We are compiling complete credentials, clinical sub-specialties, research publications, and real-time appointment booking for our full multidisciplinary clinical faculty.
+          </p>
+
+          <!-- WHAT TO EXPECT CARDS GRID -->
+          <div class="cs-feature-grid">
+            
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(196, 22, 28, 0.08); color: #C4161C;">
+                🩺
+              </div>
+              <h3 class="cs-card-title">Consultant Psychiatrists</h3>
+              <p class="cs-card-p">
+                Board-certified psychiatrists delivering neuro-psychiatric diagnosis, medical detoxification stabilization, and clinical medication management.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(196, 22, 28, 0.08); color: #C4161C;">FCPS / PMDC Licensed</span>
             </div>
-            <div class="staff-500-details">
-              <div class="staff-500-name-row">
-                <h3 class="staff-500-name">Miss Fareeha Asif</h3>
-                <span class="staff-500-verified" title="Verified Practitioner">✓</span>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(79, 70, 229, 0.08); color: #4F46E5;">
+                🧠
               </div>
-              <span class="staff-500-role">Managing Director (MD) • Head of Clinical Governance</span>
-              <div class="staff-500-creds">
-                Executive Healthcare Administration • Punjab Healthcare Commission (PHC Reg. #39483) Compliance Lead
+              <h3 class="cs-card-title">Clinical Psychology &amp; Psychometrics</h3>
+              <p class="cs-card-p">
+                Comprehensive psychological evaluations, diagnostic testing, CBT, DBT, and relapse prevention led by Miss Ayesha Ishaq and our clinical therapists.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(79, 70, 229, 0.08); color: #4F46E5;">Miss Ayesha Ishaq &amp; Team</span>
+            </div>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(16, 185, 129, 0.08); color: #059669;">
+                👑
               </div>
-              <div class="staff-500-footer">
-                <div class="staff-500-fee">
-                  <span>Department:</span>
-                  <strong>Executive Directorate</strong>
-                </div>
-                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20connect%20with%20Managing%20Director%20Miss%20Fareeha%20Asif%20office." target="_blank" rel="noopener noreferrer" class="btn-staff-500-call">
-                  <span>📱 Contact Administration</span>
+              <h3 class="cs-card-title">Executive Governance &amp; Care</h3>
+              <p class="cs-card-p">
+                Patient-first administration led by Dr. Bilal Asghar Warraich &amp; Miss Fareeha Asif, ensuring 100% confidentiality and international standard clinical care.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(16, 185, 129, 0.08); color: #059669;">PHC Reg. #39483</span>
+            </div>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(245, 158, 11, 0.08); color: #D97706;">
+                ⚡
+              </div>
+              <h3 class="cs-card-title">Instant Consultation Booking</h3>
+              <p class="cs-card-p">
+                Streamlined digital appointment scheduling, video consultation triage, and 24/7 direct admission coordination for emergency inpatient care.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(245, 158, 11, 0.08); color: #D97706;">Direct WhatsApp Access</span>
+            </div>
+
+          </div>
+
+          <!-- IMMEDIATE MEDICAL CARE CALLOUT -->
+          <div class="cs-emergency-box">
+            <div class="cs-eb-icon">🚑</div>
+            <div class="cs-eb-content">
+              <h4>Need Immediate Psychiatric or Addiction Consultation?</h4>
+              <p>
+                Our hospital and clinics are <strong>fully operational 24 hours a day, 7 days a week</strong>. Dr. Bilal Asghar Warraich and our senior clinical specialists are actively available for in-person evaluations and confidential emergency admissions.
+              </p>
+              <div class="cs-actions-row">
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20a%20consultation%20with%20your%20medical%20director%20or%20psychologist." target="_blank" rel="noopener noreferrer" class="btn btn-wa-green">
+                  <span>💬 Chat on WhatsApp (0321 7507866)</span>
+                </a>
+                <a href="tel:+923217507866" class="btn btn-red-pill">
+                  <span>📞 Call 24/7 Helpline: 0321 7507866</span>
+                </a>
+                <a href="what-we-do.html" class="btn-white-outline">
+                  <span>Explore What We Do →</span>
+                </a>
+                <a href="index.html" class="btn-white-outline">
+                  <span>Back to Homepage</span>
                 </a>
               </div>
             </div>
