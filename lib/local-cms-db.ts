@@ -54,6 +54,7 @@ interface LocalDBData {
 
 const DATA_DIR = path.join(process.cwd(), '.data');
 const DB_FILE = path.join(DATA_DIR, 'cms-store.json');
+const BACKUP_DB_FILE = path.join(process.cwd(), 'data', 'cms-store.json');
 
 const INITIAL_DATA: LocalDBData = {
   posts: [
@@ -151,21 +152,42 @@ const INITIAL_DATA: LocalDBData = {
 function readDB(): LocalDBData {
   try {
     if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+      try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (_) {}
     }
     if (!fs.existsSync(DB_FILE)) {
-      fs.writeFileSync(DB_FILE, JSON.stringify(INITIAL_DATA, null, 2), 'utf-8');
+      if (fs.existsSync(BACKUP_DB_FILE)) {
+        try {
+          const backupRaw = fs.readFileSync(BACKUP_DB_FILE, 'utf-8');
+          try { fs.writeFileSync(DB_FILE, backupRaw, 'utf-8'); } catch (_) {}
+          return JSON.parse(backupRaw);
+        } catch (_) {}
+      }
+      try { fs.writeFileSync(DB_FILE, JSON.stringify(INITIAL_DATA, null, 2), 'utf-8'); } catch (_) {}
       return INITIAL_DATA;
     }
     const raw = fs.readFileSync(DB_FILE, 'utf-8');
     const parsed = JSON.parse(raw);
     if (!parsed.posts || parsed.posts.length === 0) {
+      if (fs.existsSync(BACKUP_DB_FILE)) {
+        try {
+          const backupParsed = JSON.parse(fs.readFileSync(BACKUP_DB_FILE, 'utf-8'));
+          if (backupParsed.posts && backupParsed.posts.length > 0) {
+            try { fs.writeFileSync(DB_FILE, JSON.stringify(backupParsed, null, 2), 'utf-8'); } catch (_) {}
+            return backupParsed;
+          }
+        } catch (_) {}
+      }
       parsed.posts = INITIAL_DATA.posts;
-      fs.writeFileSync(DB_FILE, JSON.stringify(parsed, null, 2), 'utf-8');
+      try { fs.writeFileSync(DB_FILE, JSON.stringify(parsed, null, 2), 'utf-8'); } catch (_) {}
     }
     return parsed;
   } catch (err) {
-    console.warn('[local-db] Read error, serving in-memory initial data:', err);
+    console.warn('[local-db] Read error, checking backup or serving initial data:', err);
+    if (fs.existsSync(BACKUP_DB_FILE)) {
+      try {
+        return JSON.parse(fs.readFileSync(BACKUP_DB_FILE, 'utf-8'));
+      } catch (_) {}
+    }
     return INITIAL_DATA;
   }
 }
@@ -173,11 +195,20 @@ function readDB(): LocalDBData {
 function writeDB(data: LocalDBData) {
   try {
     if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+      try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (_) {}
     }
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
   } catch (err) {
     console.error('[local-db] Failed to write database file:', err);
+  }
+  try {
+    const backupDir = path.dirname(BACKUP_DB_FILE);
+    if (!fs.existsSync(backupDir)) {
+      fs.mkdirSync(backupDir, { recursive: true });
+    }
+    fs.writeFileSync(BACKUP_DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+  } catch (err) {
+    console.error('[local-db] Failed to write backup database file:', err);
   }
 }
 

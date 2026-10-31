@@ -43,7 +43,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       category: selectedCategory,
       search: searchQuery,
       page,
-      limit: 9, // Exactly 3 rows of 3 on desktop
+      limit: 12, // 4 clean rows of 3 cards on desktop
     }),
     fetchCategories(),
   ]);
