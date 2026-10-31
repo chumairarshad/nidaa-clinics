@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import seedData from '../data/cms-store.json';
 
 export interface LocalPost {
   _id: string;
@@ -151,45 +152,23 @@ const INITIAL_DATA: LocalDBData = {
 
 function readDB(): LocalDBData {
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (_) {}
-    }
-    if (!fs.existsSync(DB_FILE)) {
-      if (fs.existsSync(BACKUP_DB_FILE)) {
-        try {
-          const backupRaw = fs.readFileSync(BACKUP_DB_FILE, 'utf-8');
-          try { fs.writeFileSync(DB_FILE, backupRaw, 'utf-8'); } catch (_) {}
-          return JSON.parse(backupRaw);
-        } catch (_) {}
+    if (typeof fs !== 'undefined' && fs.existsSync && fs.existsSync(DB_FILE)) {
+      const raw = fs.readFileSync(DB_FILE, 'utf-8');
+      const parsed = JSON.parse(raw);
+      if (parsed && Array.isArray(parsed.posts) && parsed.posts.length > 0) {
+        return parsed;
       }
-      try { fs.writeFileSync(DB_FILE, JSON.stringify(INITIAL_DATA, null, 2), 'utf-8'); } catch (_) {}
-      return INITIAL_DATA;
     }
-    const raw = fs.readFileSync(DB_FILE, 'utf-8');
-    const parsed = JSON.parse(raw);
-    if (!parsed.posts || parsed.posts.length === 0) {
-      if (fs.existsSync(BACKUP_DB_FILE)) {
-        try {
-          const backupParsed = JSON.parse(fs.readFileSync(BACKUP_DB_FILE, 'utf-8'));
-          if (backupParsed.posts && backupParsed.posts.length > 0) {
-            try { fs.writeFileSync(DB_FILE, JSON.stringify(backupParsed, null, 2), 'utf-8'); } catch (_) {}
-            return backupParsed;
-          }
-        } catch (_) {}
-      }
-      parsed.posts = INITIAL_DATA.posts;
-      try { fs.writeFileSync(DB_FILE, JSON.stringify(parsed, null, 2), 'utf-8'); } catch (_) {}
-    }
-    return parsed;
   } catch (err) {
-    console.warn('[local-db] Read error, checking backup or serving initial data:', err);
-    if (fs.existsSync(BACKUP_DB_FILE)) {
-      try {
-        return JSON.parse(fs.readFileSync(BACKUP_DB_FILE, 'utf-8'));
-      } catch (_) {}
-    }
-    return INITIAL_DATA;
+    console.warn('[local-db] DB_FILE read error, checking bundled seed data:', err);
   }
+
+  // Fallback to bundled seed data compiled directly into the JS bundle
+  if (seedData && Array.isArray((seedData as any).posts) && (seedData as any).posts.length > 0) {
+    return seedData as unknown as LocalDBData;
+  }
+
+  return INITIAL_DATA;
 }
 
 function writeDB(data: LocalDBData) {
@@ -198,8 +177,8 @@ function writeDB(data: LocalDBData) {
       try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (_) {}
     }
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
-  } catch (err) {
-    console.error('[local-db] Failed to write database file:', err);
+  } catch (_err) {
+    // Read-only filesystem in serverless environments
   }
   try {
     const backupDir = path.dirname(BACKUP_DB_FILE);
@@ -207,8 +186,8 @@ function writeDB(data: LocalDBData) {
       fs.mkdirSync(backupDir, { recursive: true });
     }
     fs.writeFileSync(BACKUP_DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
-  } catch (err) {
-    console.error('[local-db] Failed to write backup database file:', err);
+  } catch (_err) {
+    // Read-only filesystem in serverless environments
   }
 }
 
