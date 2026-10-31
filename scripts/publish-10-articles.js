@@ -368,7 +368,7 @@ ${CTA_BOX('Safe Medical Drug Detoxification in Lahore')}
 // ARTICLE 09
 // ============================================================================
 const article09Content = `
-<p class="lead">One of the most agonizing dilemmas a family can face in Pakistan is watching a loved one destroy their health, career, and family through addiction while stubbornly refusing to accept help. Denial, defensiveness, and anger are biological symptoms of the disease. Knowing <strong>how to get someone admitted to a drug rehabilitation centre in Lahore</strong> legally, ethically, and compassionately is essential for breaking the deadlock and saving their life.</p>
+<p class="lead">Navigating a confidential <strong>Drug Rehabilitation Admission Lahore</strong> can feel daunting when a loved one is trapped in chemical dependency. One of the most agonizing dilemmas a family can face in Pakistan is watching a loved one destroy their health, career, and relationships while stubbornly refusing to accept help. Denial, defensiveness, and anger are biological symptoms of the disease. Understanding the legal, ethical, and clinical process of <strong>Drug Rehabilitation Admission Lahore</strong> is essential for breaking the deadlock and saving their life.</p>
 
 <p>At <strong>NiDAA Clinic</strong>, our admissions and crisis triage team guides families every step of the way, providing ethical medical solutions and family support to ensure a smooth, dignified admission process.</p>
 
@@ -401,7 +401,7 @@ ${CTA_BOX('How to Admit a Loved One for Rehab')}
 // ARTICLE 10
 // ============================================================================
 const article10Content = `
-<p class="lead">Why do so many individuals who successfully complete drug detox relapse within months of returning home? In clinical psychiatry, the answer is overwhelmingly clear: <strong>untreated underlying mental health disorders</strong>. When substance dependency co-occurs alongside a psychiatric condition, it is clinically termed a <strong>dual diagnosis</strong>. Receiving integrated <strong>dual diagnosis treatment in Lahore</strong> is the single most important factor in achieving lasting sobriety and preventing chronic relapse.</p>
+<p class="lead">Why do so many individuals who successfully complete drug detox relapse within months of returning home? In clinical psychiatry, the answer is overwhelmingly clear: <strong>untreated underlying mental health disorders</strong>. When substance dependency co-occurs alongside a psychiatric condition, comprehensive <strong>Dual Diagnosis Treatment Lahore</strong> is required. Receiving integrated <strong>Dual Diagnosis Treatment Lahore</strong> is the single most important clinical factor in achieving lasting sobriety and preventing chronic relapse.</p>
 
 <p>Led by Medical Director <strong>Dr. Bilal Warraich (MBBS, MD, DPM – Psychiatry)</strong>, <strong>NiDAA Clinic</strong> is recognized as a center of clinical excellence for dual diagnosis rehabilitation in Punjab, treating mental illness and addiction simultaneously.</p>
 
