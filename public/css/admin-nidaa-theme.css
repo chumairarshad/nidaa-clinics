@@ -1,0 +1,698 @@
+/* ==========================================================================
+   NiDAA Clinic — Modern Clinical White & Crimson Admin Theme
+   Palette: Pure White (#FFFFFF), Light Neutral (#F9FAFB, #F3F4F6),
+   Signature Medical Red (#BA181E, #C4161C), and Charcoal Black (#1F2937) Content
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Red Palette */
+  --nidaa-crimson-deep: #5A060A;
+  --nidaa-crimson-dark: #7A0C11;
+  --nidaa-crimson-mid: #8E0E14;
+  --nidaa-crimson-banner: #BA181E;
+  --nidaa-crimson-bright: #C4161C;
+  --nidaa-crimson-hover: #D71E24;
+  
+  /* Next BlogPanel variable overrides - Clean White Palette */
+  --nbp-primary: #BA181E;
+  --nbp-primary-hover: #9E1318;
+  --nbp-primary-light: #FEE2E2;
+  --nbp-text: #111827;
+  --nbp-text-muted: #4B5563;
+  --nbp-bg: #FFFFFF;
+  --nbp-bg-secondary: #F9FAFB;
+  --nbp-card-bg: #FFFFFF;
+  --nbp-border: #E5E7EB;
+  --nbp-border-focus: #BA181E;
+  --nbp-radius: 12px;
+  --nbp-font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --nbp-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --nbp-focus-ring: 0 0 0 3px rgba(186, 24, 30, 0.2);
+  --nbp-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --nbp-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --nbp-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Force Plus Jakarta Sans typography globally in admin */
+.nbp-admin,
+.nbp-admin-login {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   1. LOGIN VIEW — Clean White & Signature NiDAA Clinic Red Card
+   -------------------------------------------------------------------------- */
+.nbp-admin-login {
+  background: #F9FAFB !important;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.nbp-login-card {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08) !important;
+  color: #111827 !important;
+  padding: 3rem 2.5rem !important;
+  max-width: 440px !important;
+}
+
+.nbp-login-card::before {
+  content: 'EVIDENCE-BASED CARE \2022  CLINICAL BLOG CMS';
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #BA181E;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.nbp-login-title {
+  color: #111827 !important;
+  font-size: 1.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.nbp-login-subtitle {
+  color: #4B5563 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.5 !important;
+}
+
+.nbp-login-input {
+  background: #FFFFFF !important;
+  border: 1px solid #D1D5DB !important;
+  color: #111827 !important;
+  border-radius: 12px !important;
+  padding: 0.8rem 1rem !important;
+  font-size: 0.9375rem !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+}
+
+.nbp-login-input:focus {
+  background: #FFFFFF !important;
+  border-color: #BA181E !important;
+  box-shadow: 0 0 0 3px rgba(186, 24, 30, 0.2) !important;
+  outline: none !important;
+}
+
+.nbp-login-input::placeholder {
+  color: #9CA3AF !important;
+}
+
+.nbp-login-btn {
+  background: linear-gradient(135deg, #BA181E 0%, #8E0E14 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 0.875rem 1.5rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(186, 24, 30, 0.3) !important;
+  transition: all 0.2s ease !important;
+  margin-top: 0.5rem !important;
+}
+
+.nbp-login-btn:hover {
+  background: linear-gradient(135deg, #9E1318 0%, #7A0C11 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(186, 24, 30, 0.4) !important;
+}
+
+.nbp-login-toggle {
+  color: #4B5563 !important;
+  font-size: 0.8125rem !important;
+  margin-top: 1.25rem !important;
+  text-decoration: underline !important;
+}
+
+.nbp-login-toggle:hover {
+  color: #BA181E !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN ADMIN LAYOUT — Pure White Background with Red Active Accents
+   -------------------------------------------------------------------------- */
+.nbp-admin {
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  min-height: 100vh !important;
+}
+
+/* Sidebar */
+.nbp-admin-sidebar {
+  background: #FFFFFF !important;
+  border-right: 1px solid #E5E7EB !important;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+.nbp-sidebar-header {
+  border-bottom: 1px solid #F3F4F6 !important;
+  padding: 1.25rem 1rem !important;
+  background: #FFFFFF !important;
+}
+
+.nbp-sidebar-title {
+  color: #111827 !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: -0.01em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.nbp-sidebar-title::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #BA181E;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(186, 24, 30, 0.4);
+}
+
+.nbp-sidebar-toggle {
+  color: #6B7280 !important;
+}
+
+.nbp-sidebar-toggle:hover {
+  color: #111827 !important;
+}
+
+.nbp-sidebar-link {
+  color: #374151 !important;
+  border-radius: 12px !important;
+  padding: 0.7rem 0.85rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.nbp-sidebar-link:hover {
+  background: #F3F4F6 !important;
+  color: #111827 !important;
+  transform: translateX(3px) !important;
+}
+
+.nbp-sidebar-link.active {
+  background: linear-gradient(135deg, #BA181E 0%, #8E0E14 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(186, 24, 30, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Vector SVG icons inside sidebar */
+.nbp-sidebar-icon {
+  font-size: 0 !important;
+  color: transparent !important;
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  vertical-align: middle !important;
+  opacity: 0.85 !important;
+  transition: opacity 0.2s ease, filter 0.2s ease !important;
+}
+
+.nbp-sidebar-link:hover .nbp-sidebar-icon {
+  opacity: 1 !important;
+}
+
+.nbp-sidebar-link.active .nbp-sidebar-icon {
+  opacity: 1 !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+.nbp-sidebar-link[href$="/admin/blog"] .nbp-sidebar-icon,
+.nbp-sidebar-link:nth-of-type(1) .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='14' width='7' height='7' rx='1'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-link[href*="/posts"] .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-link[href*="/new"] .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='8' x2='12' y2='16'/%3E%3Cline x1='8' y1='12' x2='16' y2='12'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-link[href*="/categories"] .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z'/%3E%3Cline x1='7' y1='7' x2='7.01' y2='7'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-link[href*="/media"] .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-link[href*="/settings"] .nbp-sidebar-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'/%3E%3C/svg%3E") !important;
+}
+
+.nbp-sidebar-footer {
+  border-top: 1px solid #F3F4F6 !important;
+  background: #FFFFFF !important;
+}
+
+.nbp-sidebar-user {
+  color: #4B5563 !important;
+}
+
+/* Main Content Area */
+.nbp-admin-main {
+  background: #FFFFFF !important;
+  padding: 2rem 2.5rem !important;
+  color: #111827 !important;
+}
+
+.nbp-page-title,
+.nbp-section-title {
+  color: #111827 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. STAT CARDS — Clean White Cards with Red Numerical Accents
+   -------------------------------------------------------------------------- */
+.nbp-stats-grid {
+  gap: 1.25rem !important;
+  margin-bottom: 2.25rem !important;
+}
+
+.nbp-stat-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.25s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.nbp-stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #BA181E, #E5E7EB);
+}
+
+.nbp-stat-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: #D1D5DB !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.nbp-stat-number {
+  color: #BA181E !important;
+  font-size: 2.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1 !important;
+}
+
+.nbp-stat-label {
+  color: #4B5563 !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-top: 0.625rem !important;
+}
+
+/* Dashboard Sections */
+.nbp-dashboard-section,
+.nbp-category-form,
+.nbp-settings-section {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+.nbp-post-link {
+  border-bottom: 1px solid #F3F4F6 !important;
+  color: #111827 !important;
+  padding: 0.75rem 0 !important;
+}
+
+.nbp-post-link:hover {
+  color: #BA181E !important;
+}
+
+.nbp-post-link-date {
+  color: #6B7280 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTONS & PILLS — Clean Red Primary, White/Grey Secondary
+   -------------------------------------------------------------------------- */
+.nbp-btn {
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  padding: 0.6rem 1.25rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.nbp-btn-primary {
+  background: linear-gradient(135deg, #BA181E 0%, #8E0E14 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 4px 14px rgba(186, 24, 30, 0.35) !important;
+}
+
+.nbp-btn-primary:hover {
+  background: linear-gradient(135deg, #9E1318 0%, #7A0C11 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(186, 24, 30, 0.45) !important;
+  color: #FFFFFF !important;
+}
+
+.nbp-btn-secondary,
+.nbp-btn-ghost {
+  background: #FFFFFF !important;
+  border: 1px solid #D1D5DB !important;
+  color: #374151 !important;
+}
+
+.nbp-btn-secondary:hover,
+.nbp-btn-ghost:hover {
+  background: #F3F4F6 !important;
+  color: #111827 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. TABLES & POST LISTS — Crisp White with Charcoal Content
+   -------------------------------------------------------------------------- */
+.nbp-table {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+.nbp-table th {
+  background: #F9FAFB !important;
+  color: #4B5563 !important;
+  border-bottom: 1px solid #E5E7EB !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.06em !important;
+  padding: 0.9rem 1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.nbp-table td {
+  border-bottom: 1px solid #F3F4F6 !important;
+  color: #1F2937 !important;
+  padding: 0.9rem 1rem !important;
+  background: #FFFFFF !important;
+}
+
+.nbp-table tr:hover td {
+  background: #FEF2F2 !important;
+}
+
+.nbp-post-title-link {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+.nbp-post-title-link:hover {
+  color: #BA181E !important;
+}
+
+.nbp-post-slug {
+  color: #6B7280 !important;
+}
+
+/* Badges */
+.nbp-badge {
+  border-radius: 9999px !important;
+  padding: 0.25rem 0.75rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+.nbp-badge-green {
+  background: #DCFCE7 !important;
+  color: #15803D !important;
+  border: 1px solid #BBF7D0 !important;
+}
+
+.nbp-badge-yellow {
+  background: #FEF3C7 !important;
+  color: #B45309 !important;
+  border: 1px solid #FDE68A !important;
+}
+
+.nbp-badge-blue {
+  background: #DBEAFE !important;
+  color: #1D4ED8 !important;
+  border: 1px solid #BFDBFE !important;
+}
+
+.nbp-badge-gray {
+  background: #F3F4F6 !important;
+  color: #4B5563 !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. FORMS, INPUTS & CONTROLS — White Background & Charcoal Text
+   -------------------------------------------------------------------------- */
+.nbp-input,
+.nbp-select,
+.nbp-textarea {
+  background: #FFFFFF !important;
+  border: 1px solid #D1D5DB !important;
+  color: #111827 !important;
+  border-radius: 10px !important;
+  padding: 0.65rem 0.85rem !important;
+}
+
+.nbp-input:focus,
+.nbp-select:focus,
+.nbp-textarea:focus {
+  border-color: #BA181E !important;
+  box-shadow: 0 0 0 3px rgba(186, 24, 30, 0.2) !important;
+  outline: none !important;
+}
+
+.nbp-label {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. POST EDITOR & TOOLBAR — Pure White Canvas & Charcoal Black Content
+   -------------------------------------------------------------------------- */
+.nbp-editor {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+.nbp-editor-toolbar {
+  background: #F9FAFB !important;
+  border-bottom: 1px solid #E5E7EB !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.nbp-toolbar-btn {
+  color: #4B5563 !important;
+  border-radius: 6px !important;
+}
+
+.nbp-toolbar-btn:hover {
+  background: #E5E7EB !important;
+  color: #111827 !important;
+}
+
+.nbp-toolbar-btn.active {
+  background: #BA181E !important;
+  color: #FFFFFF !important;
+}
+
+.nbp-title-input {
+  color: #111827 !important;
+  background: #FFFFFF !important;
+  border-bottom: 2px solid #E5E7EB !important;
+  font-weight: 800 !important;
+  font-size: 1.75rem !important;
+  padding: 0.75rem 0 !important;
+}
+
+.nbp-title-input::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Article Content inside Editor — Charcoal Black (#1F2937 / #2D3748) */
+.nbp-editor-content {
+  background: #FFFFFF !important;
+  color: #1F2937 !important; /* Charcoal Black */
+  font-size: 1.0625rem !important;
+  line-height: 1.8 !important;
+  padding: 1.5rem !important;
+  min-height: 480px !important;
+}
+
+.nbp-editor-content p {
+  color: #2D3748 !important; /* Charcoal Black */
+  line-height: 1.85 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.nbp-editor-content h1,
+.nbp-editor-content h2 {
+  color: #BA181E !important; /* Signature NiDAA Red */
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.nbp-editor-content h3,
+.nbp-editor-content h4 {
+  color: #111827 !important; /* Deep Charcoal */
+  font-weight: 700 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.nbp-editor-content ul,
+.nbp-editor-content ol {
+  color: #2D3748 !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.nbp-editor-content li {
+  color: #2D3748 !important; /* Charcoal Black list items */
+  line-height: 1.75 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.nbp-editor-content strong,
+.nbp-editor-content b {
+  color: #111827 !important; /* Deep Rich Black */
+  font-weight: 700 !important;
+}
+
+.nbp-editor-content a {
+  color: #BA181E !important;
+  text-decoration: underline !important;
+}
+
+.nbp-editor-content blockquote {
+  border-left: 4px solid #BA181E !important;
+  background: #FEF2F2 !important;
+  color: #1F2937 !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 0 10px 10px 0 !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* Editor Sidebar */
+.nbp-editor-sidebar {
+  background: #FFFFFF !important;
+  border-left: 1px solid #E5E7EB !important;
+}
+
+.nbp-sidebar-section {
+  border-bottom: 1px solid #E5E7EB !important;
+  padding: 1.25rem !important;
+}
+
+.nbp-sidebar-heading {
+  color: #374151 !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.nbp-serp-preview {
+  background: #F9FAFB !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+}
+
+.nbp-serp-title {
+  color: #1D4ED8 !important;
+}
+
+.nbp-serp-url {
+  color: #059669 !important;
+}
+
+.nbp-serp-desc {
+  color: #4B5563 !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. MEDIA LIBRARY & DROPZONE
+   -------------------------------------------------------------------------- */
+.nbp-dropzone {
+  background: #FEF2F2 !important;
+  border: 2px dashed #FCA5A5 !important;
+  border-radius: 16px !important;
+  color: #4B5563 !important;
+}
+
+.nbp-dropzone.active {
+  background: #FEE2E2 !important;
+  border-color: #BA181E !important;
+  color: #BA181E !important;
+}
+
+.nbp-media-card {
+  background: #FFFFFF !important;
+  border: 2px solid #E5E7EB !important;
+  border-radius: 12px !important;
+}
+
+.nbp-media-card:hover,
+.nbp-media-card.selected {
+  border-color: #BA181E !important;
+  box-shadow: 0 0 0 3px rgba(186, 24, 30, 0.2) !important;
+}
+
+.nbp-media-detail {
+  background: #FFFFFF !important;
+  border-left: 1px solid #E5E7EB !important;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05) !important;
+}

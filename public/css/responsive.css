@@ -1,0 +1,668 @@
+/* ==========================================================================
+   Nidaa Clinic Lahore - Comprehensive Responsive Layout Stylesheet
+   Breakpoints: Desktop (>1024px), Tablet (769px-1024px), Mobile (<=768px, <=480px)
+   ========================================================================== */
+
+/* Mid Desktops & Laptops (max-width: 1240px) */
+@media (max-width: 1240px) {
+  .site-header .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .header-inner {
+    gap: 0.75rem;
+  }
+
+  .brand-name-group {
+    font-size: 1.25rem;
+  }
+
+  .nav-links-list {
+    gap: 0.35rem;
+  }
+
+  .nav-item {
+    font-size: 0.84rem;
+    padding: 0.38rem 0.55rem;
+  }
+
+  .header-phone-link {
+    font-size: 0.8rem;
+    padding: 0.38rem 0.65rem;
+    gap: 0.35rem;
+  }
+
+  .header-action-col {
+    gap: 0.5rem;
+  }
+
+  .header-action-col .btn-sm {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Large Tablets & Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .hero-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .bento-card-lavender,
+  .bento-card-doctor,
+  .bento-card-sage {
+    min-height: 420px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .owner-3col-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+
+  .owner-col-photo {
+    grid-column: 1 / 2;
+  }
+
+  .owner-col-bio {
+    grid-column: 2 / 3;
+  }
+
+  .owner-col-form {
+    grid-column: 1 / -1;
+    max-width: 620px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .red-feature-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.25rem;
+    padding: 2.5rem;
+  }
+
+  .rfb-pill-top {
+    align-self: center;
+  }
+
+  .rfb-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rfb-pills-row {
+    justify-content: center;
+  }
+
+  .insights-6cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-2col-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .dest-photo-frame {
+    height: 380px;
+  }
+
+  .specialists-3cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specialists-3cards-row .specialist-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .testimonials-4col-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-4col-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+  .rf-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .rf-col-brand {
+    grid-column: 1 / -1;
+  }
+
+  .stats-red-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.75rem;
+    padding: 2.25rem 2rem;
+  }
+
+  .srb-right-stats {
+    gap: 2rem;
+  }
+
+  /* Subpages Tablet (1024px) */
+  .programs-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .awards-grid-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-media-card {
+    grid-template-columns: 1fr;
+  }
+
+  .fmc-thumbnail-side {
+    min-height: 320px;
+  }
+
+  .contact-2col-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .metrics-stats-bar-red {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.75rem;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owner-3col-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .owner-col-photo, .owner-col-bio, .owner-col-form {
+    grid-column: auto;
+  }
+
+  .services-2x2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wc-3cards-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .specialists-3cards-row {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .specialists-3cards-row .specialist-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .faq-2col-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pfts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+  }
+
+  .hero-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bento-card-lavender {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .bento-card-doctor {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .bento-card-sage {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .bento-card-couple {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .bento-card-consult {
+    min-height: auto;
+    padding: 18px 16px;
+  }
+
+  .bento-card-rose {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .assessment-red-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  /* Subpages Tablet (768px) */
+  .programs-grid-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-grid-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .pr-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cfc-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-stats-bar-red {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .platforms-strip {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .chat-window-modal {
+    width: calc(100vw - 36px);
+    right: -6px;
+    bottom: 74px;
+  }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .bento-h1-title {
+    font-size: 1.5rem;
+  }
+
+  .bento-rose-h3 {
+    font-size: 1.35rem;
+  }
+
+  .insights-6cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-4col-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-4col-row {
+    grid-template-columns: 1fr;
+  }
+
+  .rfb-right-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pfts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .srb-right-stats {
+    flex-direction: column;
+    gap: 1.35rem;
+  }
+
+  .m-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .floating-whatsapp-corner {
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .wa-icon-bubble {
+    width: 52px;
+    height: 52px;
+  }
+
+  .floating-chat-container {
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .chat-trigger-btn {
+    width: 52px;
+    height: 52px;
+  }
+
+  .modal-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-dual-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Floating Scroll Bar Responsive Rules */
+@media (max-width: 680px) {
+  .floating-scroll-bar {
+    bottom: 14px;
+    width: calc(100% - 24px);
+    max-width: 390px;
+    gap: 8px;
+  }
+
+  .fsb-btn {
+    flex: 1;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.84rem;
+    gap: 6px;
+  }
+
+  .floating-whatsapp-corner {
+    display: none !important;
+  }
+
+  .floating-chat-container {
+    bottom: 74px !important;
+    right: 14px !important;
+  }
+}
+
+/* Header & Footer Logo Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-logo-img {
+    height: 40px;
+    max-width: 145px;
+  }
+  .footer-logo-img {
+    height: 36px;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-img {
+    height: 35px;
+    max-width: 130px;
+  }
+  .footer-logo-img {
+    height: 32px;
+    max-width: 125px;
+  }
+}
+
+/* Team & Addiction Services Showcase Bento Responsive Rules */
+@media (max-width: 1024px) {
+  .team-bento-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .services-bento-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .bento-team-card {
+    min-height: 440px;
+    padding: 22px 18px;
+  }
+  .bento-showcase-h2 {
+    font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-services-showcase-section {
+    padding: 2.75rem 0 3rem;
+  }
+  .bento-showcase-h2 {
+    font-size: 1.65rem;
+  }
+  .tsc-sub-title,
+  .ssc-sub-title {
+    font-size: 0.92rem;
+  }
+  .team-bento-grid-4 {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+  .services-bento-grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+  .bento-team-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+  .bento-service-card {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-showcase-h2 {
+    font-size: 1.4rem;
+  }
+  .bento-team-card {
+    padding: 18px 16px;
+  }
+  .bento-inner-img-wrap {
+    height: 150px;
+  }
+  .bsc-title {
+    font-size: 1.15rem;
+  }
+  .bsc-dark-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Staff & Organogram Responsive Rules */
+@media (max-width: 992px) {
+  .dept-grid-2x2 {
+    gap: 1.5rem;
+  }
+  .dept-hub-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .staff-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-cta-banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .org-exec-box {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .org-exec-divider {
+    width: 60%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 860px) {
+  .dept-grid-2x2 {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .d2c-image-wrap {
+    height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dept-grid-2x2 {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+  .dept-hub-grid-4 {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .staff-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .staff-filter-tabs-container {
+    gap: 0.45rem;
+  }
+  .staff-filter-btn {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.95rem;
+  }
+  .organogram-wrap {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-card-header {
+    padding: 1.15rem 1rem;
+  }
+  .staff-avatar-box {
+    width: 60px;
+    height: 60px;
+  }
+  .staff-name {
+    font-size: 1.05rem;
+  }
+  .staff-role-title {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dept-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .blog-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .owner-2col-grid {
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dept-grid-4col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .blog-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .owner-2col-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .owner-2col-grid .owner-col-photo {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .owner-action-btns-row {
+    justify-content: center;
+  }
+  .owner-key-points-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    max-width: 360px;
+    margin: 1rem auto;
+  }
+}
+
+
+
+
+

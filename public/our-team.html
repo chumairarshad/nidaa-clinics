@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Medical Team — Coming Soon | Nidaa Clinic &amp; Drug Rehab Lahore</title>
+  <meta name="description" content="Our multidisciplinary medical specialists and clinical psychology team directory is currently updating. Consultation and 24/7 helpline available at Nidaa Clinic Lahore.">
+  <meta name="keywords" content="Nidaa Clinic Lahore Doctors, Dr. Bilal Asghar Warraich, Miss Ayesha Ishaq, Clinical Psychologists Lahore, Consultant Psychiatrists Lahore, Rehab Staff Lahore">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* COMING SOON SHOWCASE STYLES */
+    .team-coming-soon-section {
+      padding: 4.5rem 0 5rem;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .cs-hero-box {
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: #FEF2F2;
+      color: #C4161C;
+      border: 1px solid #FECACA;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .cs-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #C4161C;
+      display: inline-block;
+      animation: csPulse 1.8s infinite;
+    }
+    @keyframes csPulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 22, 28, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(196, 22, 28, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 22, 28, 0); }
+    }
+    .cs-main-heading {
+      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+      font-weight: 900;
+      color: #0F172A;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .cs-highlight-red {
+      color: #C4161C;
+    }
+    .cs-lead-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.7;
+      max-width: 780px;
+      margin: 0 auto 3rem;
+    }
+    .cs-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+      margin-bottom: 3.5rem;
+    }
+    .cs-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 2rem 1.65rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .cs-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+      border-color: #CBD5E1;
+    }
+    .cs-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .cs-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 0.6rem;
+    }
+    .cs-card-p {
+      font-size: 0.88rem;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .cs-card-tag {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cs-emergency-box {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      border-radius: 24px;
+      padding: 2.75rem 2.5rem;
+      color: #FFFFFF;
+      text-align: left;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    }
+    .cs-eb-icon {
+      font-size: 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cs-eb-content h4 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.6rem;
+    }
+    .cs-eb-content p {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 760px;
+    }
+    .cs-actions-row {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-wa-green {
+      display: inline-flex;
+      align-items: center;
+      background: #25D366;
+      color: #FFFFFF !important;
+      padding: 0.75rem 1.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    }
+    .btn-wa-green:hover {
+      background: #1DA851;
+      transform: translateY(-2px);
+    }
+    .btn-white-outline {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF !important;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-white-outline:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .cs-emergency-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .cs-actions-row {
+        justify-content: center;
+      }
+      .cs-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MEDICAL HEARTBEAT PRELOADER -->
+  <div class="site-preloader" id="site-preloader">
+    <div class="heartbeat-preloader-wrap">
+      
+      <!-- Pulsing Heart & Animated ECG Line -->
+      <div class="hb-stage">
+        <div class="hb-heart-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <div class="hb-ecg-container">
+          <svg class="hb-ecg-svg" viewBox="0 0 260 50">
+            <path class="hb-ecg-bg" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+            <path class="hb-ecg-pulse" d="M0,25 L65,25 L75,25 L85,6 L95,44 L105,14 L115,34 L125,25 L140,25 L260,25" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Brand Logo -->
+      <div class="hb-brand-wrap">
+        <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="hb-brand-img">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOP SUB-HEADER / VIP 25% OFF ANNOUNCEMENT BAR -->
+  <div class="top-sub-header" id="top-sub-header">
+    <div class="container tsh-inner">
+      <div class="tsh-left">
+        <span class="tsh-badge">👑 VIP SERVICE</span>
+        <span class="tsh-text">
+          Exclusive Offer: Get <strong class="tsh-highlight">25% OFF</strong> on VIP Psychiatric &amp; Psychological Consultations with Dr. Bilal Warraich (Medical Director)!
+        </span>
+      </div>
+      <div class="tsh-right">
+        <span class="tsh-code">Use Code: <strong>VIP25</strong></span>
+        <button class="tsh-btn" onclick="claimVipDiscount()">Claim 25% OFF →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Nidaa Clinic Lahore Home">
+        <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="header-logo-img">
+      </a>
+
+
+      <!-- Desktop Navigation Menu (All Pages) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links-list">
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="what-we-do.html" class="nav-item">What We Do</a></li>
+          <li><a href="our-team.html" class="nav-item active">Our Team</a></li>
+          <li><a href="index.html#blog" class="nav-item">Blog</a></li>
+          <li><a href="awards-certificates.html" class="nav-item">Awards &amp; Certificates</a></li>
+          <li><a href="podcast-video.html" class="nav-item">Podcast &amp; Video</a></li>
+          <li><a href="reviews.html" class="nav-item">Reviews</a></li>
+          <li><a href="contact-us.html" class="nav-item">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Emergency Line -->
+      <div class="header-action-col">
+        <a href="tel:+923217507866" class="header-phone-link">
+          <span style="color: var(--color-primary-red); font-size: 1.1rem;">📞</span>
+          <span class="d-none-sm">0321 7507866</span>
+        </a>
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-red-pill btn-sm">Book Appointment</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="mobile-item">Home</a></li>
+        <li><a href="what-we-do.html" class="mobile-item">What We Do</a></li>
+        <li><a href="our-team.html" class="mobile-item active" style="color: var(--color-primary-red); font-weight: 700;">Our Team</a></li>
+        <li><a href="index.html#blog" class="mobile-item">Blog</a></li>
+        <li><a href="awards-certificates.html" class="mobile-item">Awards &amp; Certificates</a></li>
+        <li><a href="podcast-video.html" class="mobile-item">Podcast &amp; Video</a></li>
+        <li><a href="reviews.html" class="mobile-item">Reviews</a></li>
+        <li><a href="contact-us.html" class="mobile-item">Contact Us</a></li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+        <a href="tel:+923217507866" class="btn btn-red-outline btn-block">Call 24/7 Helpline</a>
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-red-pill btn-block text-center" style="text-align: center; text-decoration: none;">Book Online Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SUBPAGE HERO BANNER -->
+    <section class="subpage-hero">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-curr">Our Team</span>
+        </nav>
+        <span class="section-badge-red">NIDAA CLINIC AND DRUG REHAB LAHORE</span>
+        <h1 class="subpage-h1">Medical &amp; Clinical Team Directory — Coming Soon</h1>
+        <p class="subpage-intro">
+          We are currently upgrading and expanding our verified medical specialists and clinical psychology team directory under Punjab Healthcare Commission (PHC Reg. #39483) standards.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- COMING SOON SHOWCASE SECTION -->
+    <section class="team-coming-soon-section" id="staff-showcase">
+      <div class="container">
+        
+        <div class="cs-hero-box">
+          <div class="cs-badge-pill">
+            <span class="cs-pulse-dot"></span>
+            <span>DIRECTORY UNDER ACTIVE REFINEMENT</span>
+          </div>
+
+          <h2 class="cs-main-heading">
+            Comprehensive Medical Directory &amp; Doctor Profiles <span class="cs-highlight-red">Launching Soon</span>
+          </h2>
+
+          <p class="cs-lead-desc">
+            Led by CEO Executive <strong>Dr. Bilal Asghar Warraich</strong> (UNODC Qualified Addiction Psychiatrist) and Managing Director <strong>Miss Fareeha Asif</strong>. We are compiling complete credentials, clinical sub-specialties, research publications, and real-time appointment booking for our full multidisciplinary clinical faculty.
+          </p>
+
+          <!-- WHAT TO EXPECT CARDS GRID -->
+          <div class="cs-feature-grid">
+            
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(196, 22, 28, 0.08); color: #C4161C;">
+                🩺
+              </div>
+              <h3 class="cs-card-title">Consultant Psychiatrists</h3>
+              <p class="cs-card-p">
+                Board-certified psychiatrists delivering neuro-psychiatric diagnosis, medical detoxification stabilization, and clinical medication management.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(196, 22, 28, 0.08); color: #C4161C;">FCPS / PMDC Licensed</span>
+            </div>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(79, 70, 229, 0.08); color: #4F46E5;">
+                🧠
+              </div>
+              <h3 class="cs-card-title">Clinical Psychology &amp; Psychometrics</h3>
+              <p class="cs-card-p">
+                Comprehensive psychological evaluations, diagnostic testing, CBT, DBT, and relapse prevention led by Miss Ayesha Ishaq and our clinical therapists.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(79, 70, 229, 0.08); color: #4F46E5;">Miss Ayesha Ishaq &amp; Team</span>
+            </div>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(16, 185, 129, 0.08); color: #059669;">
+                👑
+              </div>
+              <h3 class="cs-card-title">Executive Governance &amp; Care</h3>
+              <p class="cs-card-p">
+                Patient-first administration led by Dr. Bilal Asghar Warraich &amp; Miss Fareeha Asif, ensuring 100% confidentiality and international standard clinical care.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(16, 185, 129, 0.08); color: #059669;">PHC Reg. #39483</span>
+            </div>
+
+            <div class="cs-card">
+              <div class="cs-icon-wrap" style="background: rgba(245, 158, 11, 0.08); color: #D97706;">
+                ⚡
+              </div>
+              <h3 class="cs-card-title">Instant Consultation Booking</h3>
+              <p class="cs-card-p">
+                Streamlined digital appointment scheduling, video consultation triage, and 24/7 direct admission coordination for emergency inpatient care.
+              </p>
+              <span class="cs-card-tag" style="background: rgba(245, 158, 11, 0.08); color: #D97706;">Direct WhatsApp Access</span>
+            </div>
+
+          </div>
+
+          <!-- IMMEDIATE MEDICAL CARE CALLOUT -->
+          <div class="cs-emergency-box">
+            <div class="cs-eb-icon">🚑</div>
+            <div class="cs-eb-content">
+              <h4>Need Immediate Psychiatric or Addiction Consultation?</h4>
+              <p>
+                Our hospital and clinics are <strong>fully operational 24 hours a day, 7 days a week</strong>. Dr. Bilal Asghar Warraich and our senior clinical specialists are actively available for in-person evaluations and confidential emergency admissions.
+              </p>
+              <div class="cs-actions-row">
+                <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20book%20a%20consultation%20with%20your%20medical%20director%20or%20psychologist." target="_blank" rel="noopener noreferrer" class="btn btn-wa-green">
+                  <span>💬 Chat on WhatsApp (0321 7507866)</span>
+                </a>
+                <a href="tel:+923217507866" class="btn btn-red-pill">
+                  <span>📞 Call 24/7 Helpline: 0321 7507866</span>
+                </a>
+                <a href="what-we-do.html" class="btn-white-outline">
+                  <span>Explore What We Do →</span>
+                </a>
+                <a href="index.html" class="btn-white-outline">
+                  <span>Back to Homepage</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACCREDITATION & TRUST BAR -->
+    <section class="accreditation-bar-section" style="background: #FFFFFF; padding: 3rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-title-wrap text-center" style="margin-bottom: 2rem;">
+          <span class="section-badge-red">ETHICAL HEALTHCARE STANDARDS</span>
+          <h2 class="main-section-h2" style="font-size: 1.8rem;">Clinical Excellence &amp; Accreditation</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; text-align: center;">
+          <div style="padding: 1.5rem; background: #F8FAFC; border-radius: 16px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏛️</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Punjab Healthcare Commission</h4>
+            <p style="font-size: 0.82rem; color: #64748B; margin: 0;">Registered &amp; Licensed Facility (PHC Reg. #39483)</p>
+          </div>
+          <div style="padding: 1.5rem; background: #F8FAFC; border-radius: 16px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇺🇸</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">UNODC American Qualified</h4>
+            <p style="font-size: 0.82rem; color: #64748B; margin: 0;">International Evidence-Based Addiction Protocols</p>
+          </div>
+          <div style="padding: 1.5rem; background: #F8FAFC; border-radius: 16px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">100% Confidentiality</h4>
+            <p style="font-size: 0.82rem; color: #64748B; margin: 0;">Strict Medical Privacy &amp; Anonymity Protected</p>
+          </div>
+          <div style="padding: 1.5rem; background: #F8FAFC; border-radius: 16px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚑</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">24/7 Medical Triage</h4>
+            <p style="font-size: 0.82rem; color: #64748B; margin: 0;">Inpatient Doctors, Nursing &amp; Detox on Standby</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RED FOOTER -->
+  <footer class="red-site-footer">
+    <div class="container">
+      <div class="rf-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="rf-col rf-col-brand">
+          <a href="index.html" class="rf-logo-box" aria-label="Nidaa Clinic Lahore Home">
+            <img src="assets/images/logo.png" alt="Nidaa Clinic Lahore" class="footer-logo-img">
+          </a>
+          <p class="rf-bio-text">
+            Lahore's premier psychiatric, clinical psychology, and luxury inpatient rehabilitation center (PHC Reg. #39483) at 99 Westwood Thokar, led by CEO Executive Dr. Bilal Asghar Warraich (UNODC Qualified).
+          </p>
+          <div class="rf-badges-row">
+            <span class="rf-phc-badge">PHC Reg. #39483</span>
+            <span class="rf-unodc-badge">🇺🇸 UNODC Qualified</span>
+          </div>
+          <div class="rf-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Quick Links</h4>
+          <ul class="rf-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="awards-certificates.html">Awards &amp; Certificates</a></li>
+            <li><a href="podcast-video.html">Podcast &amp; Video</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Programs -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Clinical Programs</h4>
+          <ul class="rf-links">
+            <li><a href="what-we-do.html">Medical Detoxification</a></li>
+            <li><a href="what-we-do.html">Inpatient Rehabilitation</a></li>
+            <li><a href="what-we-do.html">CBT Psychotherapy</a></li>
+            <li><a href="what-we-do.html">Dual Diagnosis Care</a></li>
+            <li><a href="what-we-do.html">Relapse Prevention</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div class="rf-col">
+          <h4 class="rf-col-title">Contact Us</h4>
+          <div class="rf-contact-lines">
+            <p>📞 0321 7507866</p>
+            <p>✉️ info@nidaaclinic.pk</p>
+            <p>📍 99 Westwood Colony, Thokar Niaz Baig, Lahore (PHC Reg. #39483)</p>
+          </div>
+        </div>
+
+        <!-- Col 5: Book Consultation Card -->
+        <div class="rf-col rf-col-book">
+          <h4 class="rf-col-title">Direct Consultation</h4>
+          <div class="rf-mini-doc-card">
+            <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Asghar Warraich" class="rf-mini-doc-img">
+            <div class="rf-mini-doc-info">
+              <span>Consult Dr. Bilal Asghar Warraich (CEO Executive)</span>
+              <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20Dr.%20Bilal%20Asghar%20Warraich." class="btn btn-red-pill btn-sm" target="_blank" rel="noopener noreferrer">Book via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="rf-bottom-bar text-center">
+        <p>© 2026 NiDAA Clinic (National Institute on Drug Abuse and Addiction) Lahore • PHC Reg. #39483. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING STICKY SCROLL ACTION BAR (Book Appointment & WhatsApp) -->
+  <div class="floating-scroll-bar" id="floating-scroll-bar">
+    <button class="fsb-btn fsb-btn-book" onclick="openAppointmentModal()" aria-label="Book Appointment">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Book Appointment</span>
+    </button>
+    <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20inquire%20about%20booking%20a%20consultation%20with%20Dr.%20Bilal%20Asghar%20Warraich." class="fsb-btn fsb-btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- 10-SECOND AUTO CALL POPUP MODAL -->
+  <div class="modal-backdrop" id="call-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeCallModal()">
+    <div class="modal-card call-modal-card">
+      <button class="modal-close" onclick="closeCallModal()" aria-label="Close Popup">&times;</button>
+      
+      <div class="cm-landscape-wrap">
+        
+        <!-- LEFT COLUMN (Doctor Profile & Status) -->
+        <div class="cm-left-col">
+          <div class="cm-badge-row">
+            <span class="cm-pulse-dot"></span>
+            <span class="cm-badge-text">24/7 Helpline • Live</span>
+          </div>
+
+          <div class="cm-doc-card-vert">
+            <div class="cm-avatar-box">
+              <img src="assets/images/dr_bilal_warraich.jpg" alt="Dr. Bilal Asghar Warraich - CEO Executive" class="cm-doc-img">
+              <span class="cm-online-badge" title="Doctor Online"></span>
+            </div>
+            <div class="cm-doc-details">
+              <h4 class="cm-doc-name">Dr. Bilal Asghar Warraich</h4>
+              <p class="cm-doc-spec">CEO Executive &amp; Medical Director</p>
+              <p class="cm-doc-loc">NiDAA Clinic Lahore (PHC #39483)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN (Headline, Phone & Actions) -->
+        <div class="cm-right-col">
+          <div class="cm-content-box">
+            <h3 class="cm-heading">Need Immediate Psychiatric or Addiction Support?</h3>
+            <p class="cm-description">
+              Speak directly with our senior clinical coordinator or connect with Dr. Bilal Asghar Warraich's team. 100% confidential.
+            </p>
+          </div>
+
+          <!-- Highlighted Phone Number Display -->
+          <div class="cm-phone-display">
+            <div class="cm-phone-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="cm-phone-text">
+              <span class="cm-phone-label">DIRECT 24/7 HELPLINE / WHATSAPP</span>
+              <span class="cm-phone-num">0321 7507866</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="cm-actions-group">
+            <div class="cm-actions-row">
+              <a href="tel:+923217507866" class="btn-call-now" onclick="closeCallModal()">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Helpline</span>
+              </a>
+
+              <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20consult%20Dr.%20Bilal%20Asghar%20Warraich." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal" onclick="closeCallModal()">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            <button type="button" class="btn btn-red-outline btn-block" onclick="switchFromCallToAppModal()">
+              <span>Book Online Appointment</span>
+            </button>
+          </div>
+
+          <div class="cm-footer-note text-center">
+            <button type="button" class="cm-dismiss-link" onclick="closeCallModal()">Maybe later</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VIP 25% OFF DISCOUNT MODAL -->
+  <div class="modal-backdrop" id="vip-modal" role="dialog" aria-modal="true" onclick="if(event.target === this) closeVipModal()">
+    <div class="modal-card vip-modal-card">
+      <button class="modal-close" onclick="closeVipModal()" aria-label="Close Popup">&times;</button>
+      
+      <div class="vm-celebrate-header">
+        <div class="vm-confetti-icons">🎉 👑 🎊 ✨</div>
+        <h3 class="vm-title">Congratulations! <span class="vm-title-grad">25% OFF</span></h3>
+        <p class="vm-subtitle">You have unlocked an exclusive <strong>25% VIP Discount Voucher</strong> for consultations with Dr. Bilal Asghar Warraich (CEO Executive) &amp; Specialists.</p>
+      </div>
+
+      <div class="vm-voucher-ticket">
+        <div class="vm-vt-left">
+          <span class="vm-vt-tag">✨ VIP EXCLUSIVE REWARD</span>
+          <div class="vm-vt-code">CODE: <span>VIP25</span></div>
+          <span class="vm-vt-note">Valid for In-Clinic (Westwood 99 Thokar) &amp; Online Video</span>
+        </div>
+        <div class="vm-vt-divider"></div>
+        <div class="vm-vt-right">
+          <span class="vm-old-price">Rs. 3,500</span>
+          <span class="vm-new-price">Rs. 2,625</span>
+          <span class="vm-save-pill">SAVE 25%</span>
+        </div>
+      </div>
+
+      <!-- Instant WhatsApp Claim Option -->
+      <div class="vm-whatsapp-claim" style="margin-top: 1.5rem;">
+        <a href="https://wa.me/923217507866?text=Hello%20NiDAA%20Clinic,%20I%20want%20to%20claim%20my%2025%25%20VIP%20Discount%20(Code:%20VIP25)%20for%20a%20consultation%20with%20Dr.%20Bilal%20Asghar%20Warraich." target="_blank" rel="noopener noreferrer" class="vm-wa-btn" style="padding: 1rem 1.5rem; font-size: 1rem; justify-content: center;" onclick="closeVipModal()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path>
+          </svg>
+          <span>Claim 25% OFF via WhatsApp (0321 7507866)</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <!-- Toast Notification Stack -->
+  <div class="toast-stack" id="toast-stack"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
