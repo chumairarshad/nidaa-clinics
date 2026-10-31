@@ -176,3 +176,4 @@ if (targetPattern.test(html)) {
 } else {
   console.error('Target pattern not found in index.html');
 }
+
