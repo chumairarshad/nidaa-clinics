@@ -4,13 +4,12 @@
   "description": "NiDAA Clinic (National Institute on Drug Abuse and Addiction) - Dr. Bilal Warraich (Medical Director)",
   "main": "server.js",
   "scripts": {
-    "dev": "next dev -p 3009",
-    "build": "next build && node scripts/copy-static.js",
-    "start": "next start -p 3009",
-    "serve": "next dev -p 3009",
-    "serve:static": "node server.js",
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Static assets ready'",
+    "next:build": "next build && node scripts/copy-static.js",
     "next:dev": "next dev -p 3009",
-    "next:build": "next build",
     "next:start": "next start -p 3009",
     "test:cms": "node tests/test-cms-suite.js"
   },
