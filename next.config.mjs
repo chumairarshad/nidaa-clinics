@@ -8,6 +8,33 @@ const nextConfig = {
       { protocol: 'https', hostname: '**' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/admin',
+        destination: '/admin/blog',
+        permanent: false,
+      },
+      {
+        source: '/admin/',
+        destination: '/admin/blog',
+        permanent: false,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: '/admin/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

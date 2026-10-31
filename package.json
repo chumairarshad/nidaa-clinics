@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "next dev -p 3009",
+    "build": "next build",
     "start": "next start -p 3009",
     "serve": "next dev -p 3009",
     "serve:static": "node server.js",
