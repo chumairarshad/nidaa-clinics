@@ -8,13 +8,8 @@ const nextConfig = {
       { protocol: 'https', hostname: '**' },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/index.html',
-      },
-    ];
+  env: {
+    BLOGPANEL_MONGODB_URI: process.env.BLOGPANEL_MONGODB_URI || 'mongodb://127.0.0.1:27017/nidaa_cms_fallback',
   },
   async redirects() {
     return [

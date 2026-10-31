@@ -21,6 +21,10 @@
 import { setConfig } from 'next-blogpanel';
 import config from '../next-blogpanel.config';
 
+if (!process.env.BLOGPANEL_MONGODB_URI) {
+  process.env.BLOGPANEL_MONGODB_URI = 'mongodb://127.0.0.1:27017/nidaa_cms_fallback';
+}
+
 setConfig(config);
 
 // ---- Custom storage backend (optional) ----
