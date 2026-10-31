@@ -1,0 +1,202 @@
+import { NextResponse } from 'next/server';
+
+interface AIRequest {
+  topic?: string;
+  action?: 'outline' | 'titles' | 'meta' | 'internal-links' | 'seo-review';
+  existingContent?: string;
+  focusKeyword?: string;
+}
+
+// Clinic real pages for verified internal linking suggestions
+const CLINIC_INTERNAL_TARGETS = [
+  { url: '/what-we-do', anchor: 'clinical psychiatric treatments & psychotherapy', context: 'Comprehensive psychiatric and mental health services' },
+  { url: '/our-team', anchor: 'Lahore clinical psychologists & psychiatric specialists', context: 'Multidisciplinary team led by Dr. Bilal Warraich' },
+  { url: '/contact-us', anchor: 'book a confidential consultation at NiDAA Clinic', context: 'Direct appointments and consultation booking' },
+  { url: '/reviews', anchor: 'patient testimonials and recovery success stories', context: 'Verified reviews and recovery milestones' },
+  { url: '/awards-certificates', anchor: 'certified psychiatric credentials and medical accreditations', context: 'Professional clinical standards and qualifications' },
+  { url: '/podcast-video', anchor: 'educational mental health podcasts and clinical video guides', context: 'Video insights on anxiety, depression, and addiction' },
+];
+
+export async function POST(request: Request) {
+  try {
+    const body: AIRequest = await request.json();
+    const { topic = 'Mental Health and Addiction Recovery', action = 'outline', existingContent = '', focusKeyword = '' } = body;
+
+    const geminiKey = process.env.GEMINI_API_KEY || process.env.AI_API_KEY;
+    const openaiKey = process.env.OPENAI_API_KEY;
+
+    // 1. If Gemini API Key is configured, use Gemini
+    if (geminiKey) {
+      try {
+        const prompt = buildAIPrompt(action, topic, focusKeyword, existingContent);
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: { temperature: 0.7, maxOutputTokens: 1000 },
+          }),
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (text) {
+            return NextResponse.json({
+              success: true,
+              provider: 'gemini',
+              action,
+              result: text,
+              internalLinkSuggestions: CLINIC_INTERNAL_TARGETS,
+              disclaimer: 'Draft generated for editorial assistance. Must be reviewed, verified, and edited by a qualified professional before publication.',
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[AI] Gemini API request failed, falling back to heuristic engine:', e);
+      }
+    }
+
+    // 2. If OpenAI API Key is configured, use OpenAI
+    if (openaiKey) {
+      try {
+        const prompt = buildAIPrompt(action, topic, focusKeyword, existingContent);
+        const res = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${openaiKey}`,
+          },
+          body: JSON.stringify({
+            model: 'gpt-4o-mini',
+            messages: [
+              { role: 'system', content: 'You are an ethical medical SEO and content strategist assisting NiDAA Clinic Lahore. You provide helpful, accurate, human-readable drafts that prioritize patient education and ethical SEO. Do not fabricate citations or statistics.' },
+              { role: 'user', content: prompt }
+            ],
+            temperature: 0.7,
+          }),
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          const text = data?.choices?.[0]?.message?.content;
+          if (text) {
+            return NextResponse.json({
+              success: true,
+              provider: 'openai',
+              action,
+              result: text,
+              internalLinkSuggestions: CLINIC_INTERNAL_TARGETS,
+              disclaimer: 'Draft generated for editorial assistance. Must be reviewed, verified, and edited by a qualified professional before publication.',
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[AI] OpenAI API request failed, falling back to heuristic engine:', e);
+      }
+    }
+
+    // 3. Built-in Deterministic/Heuristic Assistant (Zero external dependency fallback)
+    const fallbackResult = generateHeuristicAssistance(action, topic, focusKeyword, existingContent);
+
+    return NextResponse.json({
+      success: true,
+      provider: 'built-in-clinical-assistant',
+      action,
+      result: fallbackResult,
+      internalLinkSuggestions: CLINIC_INTERNAL_TARGETS,
+      disclaimer: 'Generated by NiDAA Clinic Editorial Assistant. Always review clinical accuracy before publishing.',
+    });
+  } catch (error: any) {
+    return NextResponse.json(
+      { success: false, error: error.message || 'Failed to generate assistance' },
+      { status: 500 }
+    );
+  }
+}
+
+function buildAIPrompt(action: string, topic: string, keyword: string, content: string): string {
+  const kw = keyword ? ` Focus keyword: "${keyword}".` : '';
+  switch (action) {
+    case 'titles':
+      return `Suggest 5 clear, high-intent, SEO-friendly article titles for a psychiatric and psychological clinic blog on the topic: "${topic}".${kw} Ensure titles are engaging, avoid clickbait, and match search intent.`;
+    case 'meta':
+      return `Write 3 concise meta descriptions (between 140 and 155 characters) for an article about "${topic}".${kw} Include a clear call to action and natural keyword placement.`;
+    case 'outline':
+      return `Create a structured, evidence-based article outline with H2 and H3 headings for: "${topic}".${kw} Target search intent, patient safety, actionable psychoeducation, and practical coping mechanisms.`;
+    case 'internal-links':
+      return `Analyze the following topic: "${topic}". Suggest where and how to naturally link to clinic pages: /what-we-do (treatments), /our-team (specialists), and /contact-us (consultations).`;
+    case 'seo-review':
+      return `Review the following text for readability, clarity, and SEO completeness without keyword stuffing: "${content.slice(0, 1500)}". Provide 3 actionable improvements.`;
+    default:
+      return `Provide helpful educational blog outline for topic: "${topic}".`;
+  }
+}
+
+function generateHeuristicAssistance(action: string, topic: string, keyword: string, content: string) {
+  const cleanTopic = topic.trim();
+  const kw = keyword.trim() || cleanTopic;
+
+  switch (action) {
+    case 'titles':
+      return [
+        `Understanding ${cleanTopic}: Causes, Symptoms, and Evidence-Based Treatments in Lahore`,
+        `How Psychotherapy & Clinical Care Help Overcome ${cleanTopic}`,
+        `Comprehensive Guide to ${cleanTopic}: When to Consult a Clinical Psychologist`,
+        `${cleanTopic}: Practical Coping Strategies and Psychiatric Care Options`,
+        `Navigating Recovery: Modern Approaches to Treating ${cleanTopic} at NiDAA Clinic`,
+      ];
+
+    case 'meta':
+      return [
+        `Learn about ${cleanTopic}, key symptoms, and proven therapies in Lahore. Confidential consultations led by Dr. Bilal Warraich at NiDAA Clinic.`,
+        `Comprehensive guide to understanding and overcoming ${cleanTopic}. Discover professional psychological care, evidence-based CBT, and medical support.`,
+        `Struggling with ${cleanTopic}? NiDAA Clinic provides personalized treatment plans and 24/7 confidential helpline support in Lahore.`,
+      ];
+
+    case 'outline':
+      return {
+        h1: `Comprehensive Clinical Guide to ${cleanTopic}`,
+        h2_sections: [
+          {
+            title: `1. What is ${cleanTopic}? Overview & Clinical Definition`,
+            subsections: ['Common signs and cognitive symptoms', 'Physical, emotional, and social indicators'],
+          },
+          {
+            title: `2. Primary Causes and Contributing Risk Factors`,
+            subsections: ['Biological and neurochemical factors', 'Psychological and environmental stressors'],
+          },
+          {
+            title: `3. Evidence-Based Treatment Methodologies`,
+            subsections: ['Cognitive Behavioral Therapy (CBT)', 'Medical psychiatric management when indicated', 'Family counseling and rehabilitation support'],
+          },
+          {
+            title: `4. Daily Coping Strategies & Lifestyle Interventions`,
+            subsections: ['Mindfulness and stress regulation techniques', 'Establishing supportive daily routines'],
+          },
+          {
+            title: `5. When and How to Seek Professional Help in Lahore`,
+            subsections: ['Consulting with Lahore clinical specialists', 'Confidential assessment options at NiDAA Clinic'],
+          },
+        ],
+      };
+
+    case 'internal-links':
+      return [
+        { page: '/what-we-do', recommendation: `Link the phrase "psychiatric evaluation and evidence-based psychotherapy" in Section 3 to /what-we-do` },
+        { page: '/our-team', recommendation: `Link "qualified clinical psychologists and psychiatrists" in Section 5 to /our-team` },
+        { page: '/contact-us', recommendation: `Add a closing appointment prompt linking to /contact-us or helpline 0321 7507866` },
+      ];
+
+    case 'seo-review':
+      return [
+        `Ensure your primary focus keyword "${kw}" appears naturally in the first 100 words and in at least one H2 heading.`,
+        `Break up long paragraphs into 2-3 sentence blocks to improve mobile readability.`,
+        `Include descriptive alt text for all featured and in-article images (e.g. "Doctor consulting patient with anxiety").`,
+        `Add at least 2 relevant internal links to clinic services to establish topical authority.`,
+      ];
+
+    default:
+      return { topic: cleanTopic, status: 'Ready for editorial review' };
+  }
+}

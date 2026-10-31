@@ -4,9 +4,31 @@
   "description": "NiDAA Clinic (National Institute on Drug Abuse and Addiction) - Dr. Bilal Warraich (Medical Director)",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
-    "serve": "node server.js"
+    "dev": "next dev -p 3009",
+    "start": "next start -p 3009",
+    "serve": "next dev -p 3009",
+    "serve:static": "node server.js",
+    "next:dev": "next dev -p 3009",
+    "next:build": "next build",
+    "next:start": "next start -p 3009",
+    "test:cms": "node tests/test-cms-suite.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "mongodb": "^6.5.0",
+    "next": "^14.2.25",
+    "next-blogpanel": "^1.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
   },
   "keywords": [
     "psychiatrist",

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDatePickers();
   initSmoothScroll();
   initAutoCallPopup();
+  initHomeBlogSection();
 });
 
 /* ==========================================================================
@@ -621,6 +622,70 @@ window.filterStaff = filterStaff;
 window.filterStaff500 = filterStaff500;
 window.searchStaff = searchStaff;
 window.switchTeamView = switchTeamView;
+window.initHomeBlogSection = initHomeBlogSection;
+
+/* ==========================================================================
+   DYNAMIC HOMEPAGE BLOG SECTION (Fetches live published posts)
+   ========================================================================== */
+async function initHomeBlogSection() {
+  const container = document.getElementById('home-blog-grid');
+  if (!container) return;
+
+  try {
+    const res = await fetch('/api/blog/posts?status=published&limit=4');
+    if (!res.ok) return;
+    const json = await res.json();
+    const posts = json.data || [];
+    if (!Array.isArray(posts) || posts.length === 0) return;
+
+    // Render up to 4 newest published articles
+    container.innerHTML = posts.slice(0, 4).map(post => {
+      const coverUrl = post.featured_image_url || post.coverImage?.url || 'assets/images/rehabilitation_session.jpg';
+      const categoryName = post.category_name || (post.categories && post.categories[0] ? post.categories[0].replace(/-/g, ' ') : 'Clinical Psychology');
+      const authorName = post.author_name || post.author?.name || 'Dr. Bilal Warraich';
+      const authorRole = post.author_role || post.author?.role || 'Medical Director';
+      const readingTime = post.reading_time || post.readingTime || 4;
+      const slug = post.slug;
+      const title = post.title;
+      const excerpt = post.excerpt || (post.contentText ? post.contentText.slice(0, 160) + '...' : '');
+
+      return `
+        <article class="blog-card">
+          <div class="blog-thumb-wrap">
+            <a href="/blog/${slug}" style="display:block;">
+              <img src="${coverUrl}" alt="${title}" class="blog-thumb-img" loading="lazy" onerror="this.src='assets/images/rehabilitation_session.jpg'">
+            </a>
+            <span class="blog-category-badge" style="background: rgba(186, 24, 30, 0.9);">🏥 ${categoryName}</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta-row">
+              <span>By ${authorName}</span>
+              <span>⏱️ ${readingTime} min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="/blog/${slug}" style="color: inherit; text-decoration: none;">
+                ${title}
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              ${excerpt}
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-author-info">${authorRole.split(',')[0]}</span>
+              <a href="/blog/${slug}" class="btn btn-red-pill btn-sm" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 1.15rem; font-size: 0.85rem; font-weight: 700; text-decoration: none;">
+                <span>Read More</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  } catch (err) {
+    // Keep server-rendered static fallback if fetch encounters an error
+    console.debug('Dynamic blog feed fallback:', err);
+  }
+}
 
 
 
