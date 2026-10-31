@@ -22,7 +22,13 @@ import { setConfig } from 'next-blogpanel';
 import config from '../next-blogpanel.config';
 
 if (!process.env.BLOGPANEL_MONGODB_URI) {
-  process.env.BLOGPANEL_MONGODB_URI = 'mongodb://127.0.0.1:27017/nidaa_cms_fallback';
+  process.env.BLOGPANEL_MONGODB_URI = 'mongodb://127.0.0.1:27017/nidaaclinic';
+}
+if (!process.env.BLOGPANEL_API_KEY) {
+  process.env.BLOGPANEL_API_KEY = 'nidaaclinic_secure_master_key_32chars_min_secret';
+}
+if (!process.env.BLOGPANEL_SITE_URL) {
+  process.env.BLOGPANEL_SITE_URL = 'https://www.nidaclinic.com';
 }
 
 setConfig(config);

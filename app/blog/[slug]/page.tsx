@@ -3,7 +3,14 @@ import { fetchPostBySlug, fetchPublishedPosts } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export const revalidate = 60; // Refresh every 60s or on-demand via /api/revalidate
+export const revalidate = 3600; // SSG with 1-hour ISR revalidation
+
+export async function generateStaticParams() {
+  const { posts } = await fetchPublishedPosts({ limit: 50 });
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 interface Props {
   params: Promise<{ slug: string }>;

@@ -2,7 +2,8 @@ import React from 'react';
 import { fetchPublishedPosts, fetchCategories } from '@/lib/supabase';
 import type { Metadata } from 'next';
 
-export const revalidate = 60; // Refresh every 60 seconds (ISR) or via on-demand revalidation
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Static generation with 1-hour ISR revalidation
 
 export const metadata: Metadata = {
   title: 'Psychiatric Care & Rehabilitation Journal | NiDAA Clinic Lahore',

@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { fetchPublishedPosts, fetchCategories } from '@/lib/supabase';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 3600;
+export const dynamic = 'force-static';
+export const revalidate = 86400;
 
 function escapeXml(unsafe: string): string {
   return unsafe
